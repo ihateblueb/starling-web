@@ -1,6 +1,6 @@
 <script setup>
 import Header from '../components/Header.vue'
-import Button from '../components/Button.vue'
+import ActionButton from '../components/ActionButton.vue'
 import Input from '../components/Input.vue'
 </script>
 
@@ -22,7 +22,7 @@ import Input from '../components/Input.vue'
                     <Input width="250px" placeholder="Password" />
                 </div>
                 <div>
-                    <Button>Login</Button>
+                    <ActionButton action="login">Login</ActionButton>
                 </div>
             </div>
         </div>

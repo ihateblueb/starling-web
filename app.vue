@@ -25,11 +25,18 @@
 
     --accent1: #7761FF;
     --accent1-50: #7761FF50;
-    --accent2: #a091ff;
-    --bg-danger: #ff5757;
-    --bg-warning: #f89232;
-    --bg-success: #49a749;
-    --bg-info: #9d56ee;
+    --accent2: #5949c1;
+
+    --bg-danger1: #ff5757;
+    --bg-warning1: #f89232;
+    --bg-success1: #49a749;
+    --bg-info1: #9d56ee;
+
+    --bg-danger2: #b63f3f;
+    --bg-warning2: #b46924;
+    --bg-success2: #306d30;
+    --bg-info2: #7642b2;
+    
     --button-border-top: #ffffff25;
     --button-border-btm: #00000035;
 
@@ -44,6 +51,13 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0px;
+}
+
+.btn:focus-within, .ipt:focus-within, a:focus-within {
+    outline-color: var(--accent1-50);
+    outline-offset: 1px;
+    outline-width: 3px;
+    outline-style: solid;
 }
 
 .homepage .pageHeader {
@@ -104,7 +118,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .loginDescriptionLink {
-    color: var(--accent2);
+    color: var(--accent1);
     text-decoration: none;
 }
 

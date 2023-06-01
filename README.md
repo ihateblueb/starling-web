@@ -1,5 +1,5 @@
 # Starling
-Starling is the next generation of moderation. Using Starling, it takes only a few seconds to combat trolls and rulebreakers. 
+Starling is the next generation of moderation. Using Starling, it takes only a few seconds to combat trolls and rulebreakers on it's web app. 
 It's currently still in development, but here's the plan: 
 
 1. Install to server

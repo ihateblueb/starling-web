@@ -16,6 +16,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <template>
@@ -60,23 +61,47 @@ export default {
     border-bottom-color: var(--button-border-btm);
 }
 
+.btn:hover.undefined {
+    background-color: var(--bg-secondary-alt);
+}
+
 .btn.info {
-    background-color: var(--bg-info);
+    background-color: var(--bg-info1);
+}
+
+.btn:hover.info {
+    background-color: var(--bg-info2);
 }
 
 .btn.success {
-    background-color: var(--bg-success);
+    background-color: var(--bg-success1);
+}
+
+.btn:hover.success {
+    background-color: var(--bg-success2);
 }
 
 .btn.warning {
-    background-color: var(--bg-warning);
+    background-color: var(--bg-warning1);
+}
+
+.btn:hover.warning {
+    background-color: var(--bg-warning2);
 }
 
 .btn.danger {
-    background-color: var(--bg-danger);
+    background-color: var(--bg-danger1);
+}
+
+.btn:hover.danger {
+    background-color: var(--bg-danger2);
 }
 
 .btn.accent {
     background-color: var(--accent1);
+}
+
+.btn:hover.accent {
+    background-color: var(--accent2);
 }
 </style>

@@ -2,34 +2,37 @@
 export default {
     props: {
         type: String,
-        placeholder: String,
-        width: String,
+        href: String,
+        action: String,
     },
     data: () => ({
-        inputclasses: "ipt",
-        widthstyle: "width: 500px!important;",
+        buttonclasses: "btn",
     }),
     created() {
-        this.getInputType()
-        this.getWidth()
+        this.getButtonType()
     },
     methods: {
-        async getInputType() {
-            this.inputclasses = "ipt " + this.type
+        async getButtonType() {
+            this.buttonclasses = "btn " + this.type
         },
-        async getWidth() {
-            this.widthstyle = "width: " + this.width + "!important;"
+        async buttonAction() {
+            if(this.action === "login") {
+                console.log("🐦 Attempting to login.")
+            }
         }
     }
 }
+
 </script>
 
 <template>
-    <input type="text" :class="inputclasses" :style="widthstyle" :placeholder="placeholder">
+    <a :class="buttonclasses" @click="buttonAction()" :href="href">
+        <slot></slot>
+    </a>
 </template>
 
 <style>
-.ipt {
+.btn {
     margin: 6px;
 
     padding-top: 0.5em;
@@ -52,6 +55,8 @@ export default {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
+    display: inline-block;
+
     border-radius: 0.75em;
     border-width: 0px;
     border-style: solid;
@@ -62,23 +67,47 @@ export default {
     border-bottom-color: var(--button-border-btm);
 }
 
-.ipt.info {
+.btn:hover.undefined {
+    background-color: var(--bg-secondary-alt);
+}
+
+.btn.info {
     background-color: var(--bg-info1);
 }
 
-.ipt.success {
+.btn:hover.info {
+    background-color: var(--bg-info2);
+}
+
+.btn.success {
     background-color: var(--bg-success1);
 }
 
-.ipt.warning {
+.btn:hover.success {
+    background-color: var(--bg-success2);
+}
+
+.btn.warning {
     background-color: var(--bg-warning1);
 }
 
-.ipt.danger {
+.btn:hover.warning {
+    background-color: var(--bg-warning2);
+}
+
+.btn.danger {
     background-color: var(--bg-danger1);
 }
 
-.ipt.accent {
+.btn:hover.danger {
+    background-color: var(--bg-danger2);
+}
+
+.btn.accent {
     background-color: var(--accent1);
+}
+
+.btn:hover.accent {
+    background-color: var(--accent2);
 }
 </style>

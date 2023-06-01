@@ -24,7 +24,7 @@ import Button from '../components/Button.vue'
                 Allow your moderators to run commands you define.
             </h2>
             <p class="featureDescription">
-                In your <code>config.yml</code>, you define what commands you want, what type of input you want, and more. 
+                In your <code>commands.json</code>, you define what commands you want, what type of input you want, and more. 
             </p>
         </div>
     </div>
