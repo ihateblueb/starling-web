@@ -17,7 +17,7 @@ import Button from '../components/Button.vue'
                 <a class="headerLink" href="https://modrinth.com">Download</a>
             </div>
             <div class="accountArea">
-                <Button type="accent" href="https://discord.orchidmc.me">Login</Button>
+                <Button type="accent" href="/login">Login</Button>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ import Button from '../components/Button.vue'
     display: flex;
     justify-content: center;
 
-    background-color: var(--bg-primary-50);
+    background-color: var(--bg-secondary-50);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 

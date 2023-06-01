@@ -39,11 +39,10 @@ body {
     background-color: var(--bg-primary);
 }
 
-.pageHeader {
+.homepage .pageHeader {
     padding-top: 75px;
     padding-bottom: 25px;
     background-color: var(--bg-secondary);
-    background-position: bottom;
 }
 
 .pageHeaderContent {
@@ -55,18 +54,43 @@ body {
     margin: auto;
 }
 
+.homepage .mainContent {
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+.mainContent {
+    margin-top: 70px;
+}
+
 .pageHeaderTextContainer {
     max-width: 400px;
 }
 
 .pageHeaderText {
     color: var(--text1);
-    font-family: var(--font1);
+    font-family: var(--font2);
 }
 
 .pageHeaderSubtext {
     color: var(--text1);
     font-family: var(--font1);
     font-weight: 500;
+}
+
+.featureTitle {
+    font-family: var(--font2);
+    color: var(--text1);
+    font-weight: 600;
+}
+
+.featureDescription {
+    font-family: var(--font1);
+    color: var(--text2);
+    font-weight: 400;
 }
 </style>
