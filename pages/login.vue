@@ -23,7 +23,7 @@ export default {
                     Login to Starling
                 </h2>
                 <p class="loginDescription">
-                    Don't have an account? <a class="loginDescriptionLink" href="/signup">Sign up</a>.
+                    Don't have an account? <a class="loginDescriptionLink" href="/register">Register</a>.
                 </p>
                 <div class="loginInputs">
                     <Input width="250px" placeholder="Email" />

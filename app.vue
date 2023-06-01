@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
 .pageHeaderContent {
     width: 100%;
     max-width: 1024px;
-    padding: 10px;
+    padding: 30px;
     padding-left: 20px;
     padding-right: 20px;
     margin: auto;
@@ -95,12 +95,25 @@ h1, h2, h3, h4, h5, h6, p {
 .pageHeaderText {
     color: var(--text1);
     font-family: var(--font2);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .pageHeaderSubtext {
     color: var(--text1);
     font-family: var(--font1);
     font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feature {
+    max-width: 400px;
+}
+
+.featureContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .featureTitle, .loginHeader {
@@ -150,5 +163,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 .loginLabel {
     width: 0px;
+}
+
+.loginButtonInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

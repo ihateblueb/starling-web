@@ -20,12 +20,16 @@ import Button from '../components/Button.vue'
             </div>
         </div>
         <div class="mainContent">
-            <h2 class="featureTitle">
-                Allow your moderators to run commands you define.
-            </h2>
-            <p class="featureDescription">
-                In your <code>commands.json</code>, you define what commands you want, what type of input you want, and more. 
-            </p>
+            <div class="featureContainer">
+                <div class="feature">
+                    <h2 class="featureTitle">
+                        Allow your moderators to run commands you define.
+                    </h2>
+                    <p class="featureDescription">
+                        All in an easy yet advanced configuration, you can define what commands you'd like your moderators to have access to with palceholders and more.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </template>

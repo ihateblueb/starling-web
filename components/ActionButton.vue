@@ -4,24 +4,30 @@ export default {
         type: String,
         href: String,
         action: String,
+        width: String,
     },
     data: () => ({
         buttonclasses: "btn",
+        widthstyle: "width: 500px;",
     }),
     created() {
         this.getButtonType()
+        this.getWidth()
     },
     methods: {
         async getButtonType() {
             this.buttonclasses = "btn " + this.type
+        },
+        async getWidth() {
+            this.widthstyle = "width: " + this.width + "!important;"
         },
         async buttonAction() {
             if(this.action === "login") {
                 // login
             } else if(this.action === "logout") {
                 // logout
-            } else if(this.action === "signup") {
-                // signup
+            } else if(this.action === "register") {
+                // register
             } 
         }
     }
@@ -30,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <a :class="buttonclasses" @click="buttonAction()" :href="href">
+    <a :class="buttonclasses" @click="buttonAction()" :style="widthstyle" :href="href">
         <slot></slot>
     </a>
 </template>
@@ -114,4 +120,11 @@ export default {
 .btn:hover.accent {
     background-color: var(--accent2);
 }
+
+/* Service Types -- ActionButton exclusive */
+
+.btn.discord {
+    background-color: #5865F2;
+}
+
 </style>

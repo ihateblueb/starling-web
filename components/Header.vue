@@ -2,14 +2,25 @@
 import Button from '../components/Button.vue'
 </script>
 
+<script>
+export default {
+    methods: {
+        sendHome() {
+            window.location = '/';
+        }
+    }
+}
+</script>
+
 <template>
     <div class="header">
         <div class="headerContent">
-            <div class="wordmark">
+            <div class="wordmark" @click="sendHome()">
                 <div class="smallLogo">
                     <img class="smallLogoImage" src="https://assets.orchidmc.me/starling/logo.png">
                 </div>
                 <span class="brandName">Starling</span>
+                <span class="betaTag">BETA</span>
             </div>
             <div class="headerLinksArea">
                 <a class="headerLink" href="https://discord.gg/">Support</a>
@@ -24,18 +35,28 @@ import Button from '../components/Button.vue'
 </template>
   
 <style>
+.betaTag {
+    font-size: 13px;
+    font-family: var(--font2);
+    border-radius: 0.5em;
+}
+
 .header {
     width: 100%;
     display: flex;
     justify-content: center;
 
-    background-color: var(--bg-secondary-50);
+    background-color: var(--bg-primary-50);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.homepage .header {
+    background-color: var(--bg-secondary-50);
 }
 
 .headerContent {
@@ -59,7 +80,7 @@ import Button from '../components/Button.vue'
 }
 
 .donateLink {
-    color: #f87ac3!important;
+    color: #f87ac3 !important;
 }
 
 .headerLink {
@@ -85,6 +106,7 @@ import Button from '../components/Button.vue'
     align-items: center;
 
     flex-grow: 0;
+    cursor: pointer;
 }
 
 .brandName {
@@ -98,12 +120,12 @@ import Button from '../components/Button.vue'
 }
 
 .smallLogo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .smallLogoImage {
-  height: 35px;
-  width: 35px;
+    height: 35px;
+    width: 35px;
 }
 </style>

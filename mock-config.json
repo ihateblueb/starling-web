@@ -1,0 +1,29 @@
+{
+    "server-name": "Orchid",
+    "commands": {
+        "ban": {
+            "command": "cmi ban %username% %reason%",
+            "input": {
+                "enabled": "true",
+                "username": {
+                    "type": "text"
+                },
+                "reason": {
+                    "type": "text"
+                }
+            }
+        },
+        "warn": {
+            "command": "cmi warn %username% %reason%",
+            "input": {
+                "enabled": "true",
+                "username": {
+                    "type": "text"
+                },
+                "reason": {
+                    "type": "text"
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
 <script setup>
 import Header from '../components/Header.vue'
 import ActionButton from '../components/ActionButton.vue'
-import Input from '../components/Input.vue'
+import DiscordIcon from '../components/icons/DiscordIcon.vue'
+import GithubIcon from '../components/icons/GithubIcon.vue'
 </script>
 
 <script>
@@ -20,18 +21,24 @@ export default {
         <div class="mainContent loginContent">
             <div class="loginContainer">
                 <h2 class="loginHeader">
-                    Sign Up for Starling
+                    Register for Starling
                 </h2>
                 <p class="loginDescription">
                     Already have an account? <a class="loginDescriptionLink" href="/login">Login</a>.
                 </p>
                 <div class="loginInputs">
-                    <Input width="250px" placeholder="Email" />
-                    <Input itype="password" width="250px" placeholder="Password" />
-                    <Input itype="password" width="250px" placeholder="Server Token" />
-                </div>
-                <div>
-                    <ActionButton action="signup">Sign Up</ActionButton>
+                    <ActionButton action="signup" width="250px" type="discord">
+                        <div class="loginButtonInner">
+                            <DiscordIcon />
+                            Register with Discord
+                        </div>
+                    </ActionButton>
+                    <ActionButton action="register" width="250px" type="github">
+                        <div class="loginButtonInner">
+                            <GithubIcon />
+                            Register with GitHub
+                        </div>
+                    </ActionButton>
                 </div>
             </div>
         </div>
