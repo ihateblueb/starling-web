@@ -1,42 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Starling
+Starling is the next generation of moderation. Using Starling, it takes only a few seconds to combat trolls and rulebreakers. 
+It's currently still in development, but here's the plan: 
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+1. Install to server
+2. Get token from server
+3. Admin signs up with token, creates moderator accounts
+4. Admins config the runnable commands
+5. Moderators can login and use the app
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Development Todolist
+[ ] Test SEO and embeds on Discord & Twitter
