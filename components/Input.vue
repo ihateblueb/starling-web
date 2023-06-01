@@ -4,14 +4,17 @@ export default {
         type: String,
         placeholder: String,
         width: String,
+        itype: String,
     },
     data: () => ({
         inputclasses: "ipt",
         widthstyle: "width: 500px!important;",
+        inputtype: "text",
     }),
     created() {
         this.getInputType()
         this.getWidth()
+        this.determineIType()
     },
     methods: {
         async getInputType() {
@@ -19,13 +22,20 @@ export default {
         },
         async getWidth() {
             this.widthstyle = "width: " + this.width + "!important;"
+        },
+        async determineIType() {
+            if (this.itype === "password") {
+                this.inputtype = "password"
+            } else {
+                this.inputtype = "text"
+            }
         }
     }
 }
 </script>
 
 <template>
-    <input type="text" :class="inputclasses" :style="widthstyle" :placeholder="placeholder">
+    <input :type="inputtype" :class="inputclasses" :style="widthstyle" :placeholder="placeholder">
 </template>
 
 <style>
@@ -41,7 +51,7 @@ export default {
     color: var(--text1);
 
     user-select: none;
-    cursor: pointer;
+    cursor: text;
     transition: .3s;
 
     font-family: var(--font1);

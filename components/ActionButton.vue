@@ -17,8 +17,12 @@ export default {
         },
         async buttonAction() {
             if(this.action === "login") {
-                console.log("🐦 Attempting to login.")
-            }
+                // login
+            } else if(this.action === "logout") {
+                // logout
+            } else if(this.action === "signup") {
+                // signup
+            } 
         }
     }
 }

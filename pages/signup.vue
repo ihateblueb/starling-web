@@ -20,17 +20,18 @@ export default {
         <div class="mainContent loginContent">
             <div class="loginContainer">
                 <h2 class="loginHeader">
-                    Login to Starling
+                    Sign Up for Starling
                 </h2>
                 <p class="loginDescription">
-                    Don't have an account? <a class="loginDescriptionLink" href="/signup">Sign up</a>.
+                    Already have an account? <a class="loginDescriptionLink" href="/login">Login</a>.
                 </p>
                 <div class="loginInputs">
                     <Input width="250px" placeholder="Email" />
                     <Input itype="password" width="250px" placeholder="Password" />
+                    <Input itype="password" width="250px" placeholder="Server Token" />
                 </div>
                 <div>
-                    <ActionButton action="login">Login</ActionButton>
+                    <ActionButton action="signup">Sign Up</ActionButton>
                 </div>
             </div>
         </div>
