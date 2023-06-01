@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
+    color-scheme: dark;
+
     --bg-primary: #2c2d33;
     --bg-secondary: #25262b;
     --bg-secondary-alt: #1d1e22;
@@ -23,6 +25,7 @@
 
     --accent1: #7761FF;
     --accent1-50: #7761FF50;
+    --accent2: #a091ff;
     --bg-danger: #ff5757;
     --bg-warning: #f89232;
     --bg-success: #49a749;
@@ -37,6 +40,10 @@
 body {
     margin: 0px;
     background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
 }
 
 .homepage .pageHeader {
@@ -82,15 +89,52 @@ body {
     font-weight: 500;
 }
 
-.featureTitle {
+.featureTitle, .loginHeader {
     font-family: var(--font2);
     color: var(--text1);
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.featureDescription {
+.featureDescription, .loginDescription {
     font-family: var(--font1);
     color: var(--text2);
     font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.loginDescriptionLink {
+    color: var(--accent2);
+    text-decoration: none;
+}
+
+.loginContent {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+}
+
+.loginContainer {
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.loginInputContainer, .loginLabel {
+    display: block;
+}
+
+.loginInputs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.loginLabel {
+    width: 0px;
 }
 </style>
