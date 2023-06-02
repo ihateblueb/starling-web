@@ -21,6 +21,10 @@ export default {
         async getWidth() {
             this.widthstyle = "width: " + this.width + "!important;"
         },
+        async buttonClick() {
+
+            this.buttonAction()
+        },
         async buttonAction() {
             if(this.action === "login") {
                 // login
@@ -36,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <a :class="buttonclasses" @click="buttonAction()" :style="widthstyle" :href="href">
+    <a :class="buttonclasses" @click="buttonClick()" :style="widthstyle" :href="href">
         <slot></slot>
     </a>
 </template>
@@ -75,6 +79,14 @@ export default {
     border-top-color: var(--button-border-top);
     border-bottom-width: 0.1em;
     border-bottom-color: var(--button-border-btm);
+}
+
+.btn:active {
+    transform: scale(90%);
+}
+
+.noleft {
+    margin-left: 0px!important;
 }
 
 .btn:hover.undefined {
@@ -121,10 +133,30 @@ export default {
     background-color: var(--accent2);
 }
 
-/* Service Types -- ActionButton exclusive */
+.btn.dark {
+   background-color: var(--bg-secondary-alt); 
+}
+
+.btn:hover.dark {
+   background-color: var(--bg-tertiary); 
+}
+
+/* Service Types */
 
 .btn.discord {
     background-color: #5865F2;
+}
+
+.btn:hover.discord {
+    background-color: #4650b9;
+}
+
+.btn.github {
+    background-color: #0d0d0e;
+}
+
+.btn:hover.github {
+    background-color: #060607;
 }
 
 </style>

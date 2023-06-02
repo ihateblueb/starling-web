@@ -7,7 +7,7 @@ import Button from '../components/Button.vue'
     <div class="homepage">
         <div class="pageHeader">
             <Header />
-            <div class="pageHeaderContent">
+            <div class="pageHeaderContent homepageGrid">
                 <div class="pageHeaderTextContainer">
                     <h2 class="pageHeaderText">
                         Keep your server safe,<br>
@@ -16,11 +16,12 @@ import Button from '../components/Button.vue'
                     <h3 class="pageHeaderSubtext">
                         With Starling, you and your team can always be connected.
                     </h3>
+                    <Button href="/register" type="dark noleft">Register</Button>
                 </div>
             </div>
         </div>
         <div class="mainContent">
-            <div class="featureContainer">
+            <div class="featureContainer homepageGrid">
                 <div class="feature">
                     <h2 class="featureTitle">
                         Allow your moderators to run commands you define.

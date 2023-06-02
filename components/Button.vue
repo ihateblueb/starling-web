@@ -61,6 +61,14 @@ export default {
     border-bottom-color: var(--button-border-btm);
 }
 
+.btn:active {
+    transform: scale(90%);
+}
+
+.noleft {
+    margin-left: 0px!important;
+}
+
 .btn:hover.undefined {
     background-color: var(--bg-secondary-alt);
 }
@@ -104,4 +112,31 @@ export default {
 .btn:hover.accent {
     background-color: var(--accent2);
 }
+
+.btn.dark {
+   background-color: var(--bg-secondary-alt); 
+}
+
+.btn:hover.dark {
+   background-color: var(--bg-tertiary); 
+}
+
+/* Service Types */
+
+.btn.discord {
+    background-color: #5865F2;
+}
+
+.btn:hover.discord {
+    background-color: #4650b9;
+}
+
+.btn.github {
+    background-color: #0d0d0e;
+}
+
+.btn:hover.github {
+    background-color: #060607;
+}
+
 </style>

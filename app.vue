@@ -12,11 +12,13 @@
     --bg-primary: #2c2d33;
     --bg-secondary: #25262b;
     --bg-secondary-alt: #1d1e22;
+    --bg-tertiary: #121316;
     --bg-accent: #3f4149;
 
     --bg-primary-50: #2c2d3350;
     --bg-secondary-50: #25262b50;
     --bg-secondary-alt-50: #1d1e2250;
+    --bg-tertiary-50: #12131650;
     --bg-accent-50: #3f414950;
 
     --text1: #ffffff;
@@ -88,8 +90,14 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 70px;
 }
 
+.homepageGrid {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 0 20px;
+}
+
 .pageHeaderTextContainer {
-    max-width: 400px;
+    grid-column: span 3;
 }
 
 .pageHeaderText {
@@ -109,6 +117,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .feature {
     max-width: 400px;
+    grid-column: span 3;
 }
 
 .featureContainer {

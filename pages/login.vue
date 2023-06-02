@@ -1,7 +1,8 @@
 <script setup>
 import Header from '../components/Header.vue'
 import ActionButton from '../components/ActionButton.vue'
-import Input from '../components/Input.vue'
+import DiscordIcon from '../components/icons/DiscordIcon.vue'
+import GithubIcon from '../components/icons/GithubIcon.vue'
 </script>
 
 <script>
@@ -26,11 +27,18 @@ export default {
                     Don't have an account? <a class="loginDescriptionLink" href="/register">Register</a>.
                 </p>
                 <div class="loginInputs">
-                    <Input width="250px" placeholder="Email" />
-                    <Input itype="password" width="250px" placeholder="Password" />
-                </div>
-                <div>
-                    <ActionButton action="login">Login</ActionButton>
+                    <ActionButton action="login" width="250px" type="discord">
+                        <div class="loginButtonInner">
+                            <DiscordIcon />
+                            Login with Discord
+                        </div>
+                    </ActionButton>
+                    <ActionButton action="login" width="250px" type="github">
+                        <div class="loginButtonInner">
+                            <GithubIcon />
+                            Login with GitHub
+                        </div>
+                    </ActionButton>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ export default {
                     Already have an account? <a class="loginDescriptionLink" href="/login">Login</a>.
                 </p>
                 <div class="loginInputs">
-                    <ActionButton action="signup" width="250px" type="discord">
+                    <ActionButton action="register" width="250px" type="discord">
                         <div class="loginButtonInner">
                             <DiscordIcon />
                             Register with Discord

@@ -20,7 +20,6 @@ export default {
                     <img class="smallLogoImage" src="https://assets.orchidmc.me/starling/logo.png">
                 </div>
                 <span class="brandName">Starling</span>
-                <span class="betaTag">BETA</span>
             </div>
             <div class="headerLinksArea">
                 <a class="headerLink" href="https://discord.gg/">Support</a>
