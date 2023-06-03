@@ -1,4 +1,6 @@
 <script>
+import { staticGenerationBailout } from 'next/dist/client/components/static-generation-bailout'
+
 export default {
     props: {
         type: String,
@@ -27,16 +29,15 @@ export default {
         },
         async buttonAction() {
             if(this.action === "login") {
-                // login
+
             } else if(this.action === "logout") {
-                // logout
+
             } else if(this.action === "register") {
-                // register
+                
             } 
         }
     }
 }
-
 </script>
 
 <template>

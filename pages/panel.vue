@@ -13,9 +13,9 @@ export default {
         <div class="pageHeader">
             <Header />
         </div>
-        <div class="mainContent panelContent">
-            <div class="panelHeader">
-                <h1>Your servers</h1>
+        <div class="mainContent serverListContent">
+            <div class="serverListHeader">
+                <h1 class="serverListTitle">Your </h1>
             </div>
         </div>
     </div>
