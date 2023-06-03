@@ -38,7 +38,7 @@
     --bg-warning2: #b46924;
     --bg-success2: #306d30;
     --bg-info2: #7642b2;
-    
+
     --button-border-top: #ffffff25;
     --button-border-btm: #00000035;
 
@@ -51,11 +51,19 @@ body {
     background-color: var(--bg-primary);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0px;
 }
 
-.btn:focus-within, .ipt:focus-within, a:focus-within {
+.btn:focus-within,
+.ipt:focus-within,
+a:focus-within {
     outline-color: var(--accent1-50);
     outline-offset: 1px;
     outline-width: 3px;
@@ -68,8 +76,9 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--bg-secondary);
 }
 
-.pageHeaderContent, .serverListContent, .serverContent {
-    width: 100%;
+.pageHeaderContent,
+.serverListContent,
+.serverContent {
     max-width: 1024px;
     padding: 30px;
     padding-left: 20px;
@@ -78,7 +87,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .homepage .mainContent {
-    width: 100%;
     max-width: 1024px;
     padding: 10px;
     padding-left: 20px;
@@ -92,7 +100,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .homepageGrid {
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 0 20px;
 }
 
@@ -125,14 +133,16 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 30px;
 }
 
-.featureTitle, .loginHeader {
+.featureTitle,
+.loginHeader {
     font-family: var(--font2);
     color: var(--text1);
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.featureDescription, .loginDescription {
+.featureDescription,
+.loginDescription {
     font-family: var(--font1);
     color: var(--text2);
     font-weight: 400;
@@ -161,7 +171,8 @@ h1, h2, h3, h4, h5, h6, p {
     margin: auto;
 }
 
-.loginInputContainer, .loginLabel {
+.loginInputContainer,
+.loginLabel {
     display: block;
 }
 
@@ -180,4 +191,70 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center;
 }
 
+.playerList {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: .75em;
+}
+
+.playerContainer {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.playerHead {
+    height: 25px;
+    margin: 6px;
+}
+
+.playerName {
+    font-family: var(--font1);
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.playerContent {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.serverName {
+    font-family: var(--font2);
+    color: var(--text1);
+}
+
+.serverStats {
+    font-family: var(--font1);
+    color: var(--text2);
+}
+
+@media (max-width: 680px) {
+    .pageHeaderTextContainer, .feature {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 520px) {
+    .playerList {
+        background-color: var(--bg-secondary);
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border-radius: 0em;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .headerLink {
+        display: none;
+    }
+
+    .pageHeaderTextContainer, .feature {
+        grid-column: span 7;
+    }
+}
 </style>

@@ -1,3 +1,7 @@
+<script setup>
+import AutofillPlayer from '../../components/AutofillPlayer.vue';
+</script>
+
 <script>
 export default {
     data: () => ({
@@ -18,11 +22,28 @@ export default {
         </div>
         <div class="mainContent serverContent">
             <div class="serverInfoPanel">
-                <h1>{{ server.name }}</h1>
-                <span>{{ server.players.count }} player(s) online</span>
+                <h1 class="serverName">{{ server.name }}</h1>
+                <span class="serverStats">{{ server.players.count }} player(s) online</span>
             </div>
             <div class="playerList">
-
+                <div class="playerListInner">
+                    <AutofillPlayer name="Gooop00" />
+                    <AutofillPlayer name="blueb" />
+                    <AutofillPlayer name="kurbiis" />
+                    <AutofillPlayer name="Gooop00" />
+                    <AutofillPlayer name="blueb" />
+                    <AutofillPlayer name="kurbiis" />
+                    <AutofillPlayer name="Gooop00" />
+                    <AutofillPlayer name="blueb" />
+                    <AutofillPlayer name="kurbiis" />
+                    <AutofillPlayer name="Gooop00" />
+                    <AutofillPlayer name="blueb" />
+                    <AutofillPlayer name="kurbiis" />
+                    <AutofillPlayer name="Gooop00" />
+                    <AutofillPlayer name="blueb" />
+                    <AutofillPlayer name="kurbiis" />
+                </div>
+                <Button type="danger">Clear Inputs</Button>
             </div>
             <div class="serverCommands">
 

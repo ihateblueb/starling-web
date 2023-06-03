@@ -11,6 +11,7 @@ export default defineEventHandler((event) => {
         statusMessage: 'Success',
         // real important api response
         serverName: 'Orchid',
+        serverID: 1,
         players: {
             count: 3,
             BasicBee_: {

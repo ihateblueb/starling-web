@@ -64,6 +64,8 @@ export default {
     border-top-color: var(--button-border-top);
     border-bottom-width: 0.1em;
     border-bottom-color: var(--button-border-btm);
+
+    -webkit-appearance: none;
 }
 
 .btn:active {
