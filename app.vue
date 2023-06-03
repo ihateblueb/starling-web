@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--bg-secondary);
 }
 
-.pageHeaderContent {
+.pageHeaderContent, .serverListContent, .serverContent {
     width: 100%;
     max-width: 1024px;
     padding: 30px;

@@ -2,7 +2,10 @@
 export default {
     data: () => ({
         server: {
-            name: "Orchid"
+            name: "Your Server",
+            players: {
+                count: 0
+            }
         }
     })
 }
@@ -16,6 +19,13 @@ export default {
         <div class="mainContent serverContent">
             <div class="serverInfoPanel">
                 <h1>{{ server.name }}</h1>
+                <span>{{ server.players.count }} player(s) online</span>
+            </div>
+            <div class="playerList">
+
+            </div>
+            <div class="serverCommands">
+
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
         head: {
             title: 'Starling',
             meta: [
-                { name: "Starling", content: "Keep your Minecraft server safe while you're offline." }
+                { name: "Starling", content: "Keep your Minecraft server safe, even while you're offline." }
             ],
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
@@ -25,5 +25,8 @@ export default defineNuxtConfig({
             allow404WithoutAuth: true,
             addDefaultCallbackUrl: true
         }
-      }
+    },
+    serverMiddleware: {
+        '/api/v1': '~/api/v1'
+    }
 })

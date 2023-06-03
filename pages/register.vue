@@ -1,16 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import Header from '../components/Header.vue'
-import ActionButton from '../components/ActionButton.vue'
+import Button from '../components/Button.vue'
 import DiscordIcon from '../components/icons/DiscordIcon.vue'
-import GithubIcon from '../components/icons/GithubIcon.vue'
-</script>
+import GitHubIcon from '../components/icons/GithubIcon.vue'
 
-<script>
-export default {
-    created() {
-        // Check for cached credentials, if they exist login.
+definePageMeta({
+    auth: {
+        unauthenticatedOnly: true,
+        navigateAuthenticatedTo: '/',
     }
-}
+})
+const { signIn } = useAuth()
 </script>
 
 <template>
@@ -27,18 +27,18 @@ export default {
                     Already have an account? <a class="loginDescriptionLink" href="/login">Login</a>.
                 </p>
                 <div class="loginInputs">
-                    <ActionButton action="register" width="250px" type="discord">
+                    <Button @click="signIn('discord')" width="250px" type="discord">
                         <div class="loginButtonInner">
                             <DiscordIcon />
-                            Register with Discord
+                            Login with Discord
                         </div>
-                    </ActionButton>
-                    <ActionButton action="register" width="250px" type="github">
+                    </Button>
+                    <Button @click="signIn('github')" width="250px" type="github">
                         <div class="loginButtonInner">
-                            <GithubIcon />
-                            Register with GitHub
+                            <GitHubIcon />
+                            Login with GitHub
                         </div>
-                    </ActionButton>
+                    </Button>
                 </div>
             </div>
         </div>

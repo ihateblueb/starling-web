@@ -15,8 +15,9 @@ export default {
         </div>
         <div class="mainContent serverListContent">
             <div class="serverListHeader">
-                <h1 class="serverListTitle">Your </h1>
+                <h1 class="serverListTitle">Your servers</h1>
             </div>
+            
         </div>
     </div>
 </template>
