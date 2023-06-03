@@ -43,8 +43,8 @@ export default {
                     <AutofillPlayer name="blueb" />
                     <AutofillPlayer name="kurbiis" />
                 </div>
-                <Button type="danger">Clear Inputs</Button>
             </div>
+                <Button type="danger">Clear Inputs</Button>
             <div class="serverCommands">
 
             </div>
