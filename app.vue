@@ -39,8 +39,8 @@
     --bg-success2: #306d30;
     --bg-info2: #7642b2;
 
-    --button-border-top: #ffffff25;
-    --button-border-btm: #00000035;
+    --button-border: #00000025;
+    --button-shadow: #00000055;
 
     --font1: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font2: "Geologica", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -78,7 +78,8 @@ a:focus-within {
 
 .pageHeaderContent,
 .serverListContent,
-.serverContent {
+.serverContent,
+.errorContent {
     max-width: 1024px;
     padding: 30px;
     padding-left: 20px;
@@ -98,13 +99,14 @@ a:focus-within {
     margin-top: 70px;
 }
 
-.homepageGrid {
+.homepageGrid, .gridContainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 0 20px;
 }
 
-.pageHeaderTextContainer {
+.pageHeaderTextContainer, .errorHeader {
+    justify-self: start;
     grid-column: span 3;
 }
 
@@ -233,7 +235,7 @@ a:focus-within {
 }
 
 @media (max-width: 680px) {
-    .pageHeaderTextContainer, .feature {
+    .pageHeaderTextContainer, .errorHeader, .feature {
         grid-column: span 4;
     }
 }
@@ -253,8 +255,20 @@ a:focus-within {
         display: none;
     }
 
-    .pageHeaderTextContainer, .feature {
+    .pageHeaderTextContainer, .errorHeader, .feature {
         grid-column: span 7;
     }
+}
+
+.errorCode {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.errorCode, .errorTitle {
+    font-family: var(--font2);
+}
+.errorTitle {
+    font-weight: 100;
 }
 </style>

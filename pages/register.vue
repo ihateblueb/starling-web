@@ -30,13 +30,13 @@ const { signIn } = useAuth()
                     <Button @click="signIn('discord')" width="250px" type="discord">
                         <div class="loginButtonInner">
                             <DiscordIcon />
-                            Login with Discord
+                            Register with Discord
                         </div>
                     </Button>
                     <Button @click="signIn('github')" width="250px" type="github">
                         <div class="loginButtonInner">
                             <GitHubIcon />
-                            Login with GitHub
+                            Register with GitHub
                         </div>
                     </Button>
                 </div>

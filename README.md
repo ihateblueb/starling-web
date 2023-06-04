@@ -10,3 +10,4 @@ It's currently still in development, but here's the plan:
 
 ## Development Todolist
 [ ] Test SEO and embeds on Discord & Twitter
+[ ] set links for support buttons on header, footer, and in error page

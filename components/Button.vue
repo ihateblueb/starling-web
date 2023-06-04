@@ -57,15 +57,9 @@ export default {
     display: inline-block;
 
     border-radius: 0.75em;
-    border-width: 0px;
-    border-style: solid;
-    
-    border-top-width: 0.1em;
-    border-top-color: var(--button-border-top);
-    border-bottom-width: 0.1em;
-    border-bottom-color: var(--button-border-btm);
 
-    -webkit-appearance: none;
+    box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
+    
 }
 
 .btn:active {
@@ -73,7 +67,7 @@ export default {
 }
 
 .noleft {
-    margin-left: 0px!important;
+    margin-left: 0px !important;
 }
 
 .btn:hover.undefined {
@@ -121,11 +115,11 @@ export default {
 }
 
 .btn.dark {
-   background-color: var(--bg-secondary-alt); 
+    background-color: var(--bg-secondary-alt);
 }
 
 .btn:hover.dark {
-   background-color: var(--bg-tertiary); 
+    background-color: var(--bg-tertiary);
 }
 
 /* Service Types */
@@ -139,11 +133,10 @@ export default {
 }
 
 .btn.github {
-    background-color: #0d0d0e;
+    background-color: #1f1f21;
 }
 
 .btn:hover.github {
-    background-color: #060607;
+    background-color: rgb(27, 27, 29);
 }
-
 </style>
