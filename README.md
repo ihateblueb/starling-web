@@ -9,10 +9,10 @@ It's currently still in development, but here's the plan:
 5. Moderators can login and use the app
 
 ## Development Todolist
-[ ] test SEO and embeds on discord & twitter
-[ ] set links for support buttons on header, footer, and in error page
-[x] move css
-[ ] clean up css
-[ ] database.... *shudders*
-[ ] determine if user is logged in in header & show avatar, username, and panel button
-[ ] add authentication to requests by using session data on request
+[ ] test SEO and embeds on discord & twitter 
+[ ] set links for support buttons on header, footer, and in error page 
+[x] move css 
+[ ] clean up css 
+[ ] database.... *shudders* 
+[ ] determine if user is logged in in header & show avatar, username, and panel button 
+[ ] add authentication to requests by using session data on request 
