@@ -27,13 +27,13 @@ const { signIn } = useAuth()
                     Don't have an account? <a class="loginDescriptionLink" href="/register">Register</a>.
                 </p>
                 <div class="loginInputs">
-                    <Button href="https://discord.com/oauth2/authorize?client_id=1114353512210509945&scope=identify%20email&response_type=code" width="250px" type="discord">
+                    <Button @click="signIn('discord')" width="250px" type="discord">
                         <div class="loginButtonInner">
                             <DiscordIcon />
                             Login with Discord
                         </div>
                     </Button>
-                    <Button @click="signIn()" width="250px" type="github">
+                    <Button @click="signIn('github')" width="250px" type="github">
                         <div class="loginButtonInner">
                             <GitHubIcon />
                             Login with GitHub

@@ -6,6 +6,8 @@ export default defineEventHandler((event) => {
             statusMessage: 'Server ID should be an integer',
         })
     }
+    // check if user is real
+    // check if user has permission
     return {
         statusCode: 200,
         statusMessage: 'Success',
