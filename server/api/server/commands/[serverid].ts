@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     return {
         statusCode: 200,
         statusMessage: 'Success',
-        // real important api response
+        // real important api response -- this is filler data while i work out the frontend
         serverID: 1,
         commands: {
             "ban": {
