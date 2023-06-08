@@ -1,5 +1,7 @@
 <script setup>
 import AutofillPlayer from '../../components/AutofillPlayer.vue';
+import Input from '../../components/Input.vue';
+import Command from '../../components/Command.vue';
 </script>
 
 <script>
@@ -9,16 +11,17 @@ export default {
             id: 0,
             name: "Your Server",
             playerCount: 0,
-            players: [{
-
-            }]
+            players: [{}],
+            commands: [{}]
         }
     }),
     mounted() {
+        // load from top of page to bottom of page visually
         console.log(this.$route.params);
         this.server.id = this.$route.params.serverid
         this.getServerInfo()
-        this.getServerStatus()
+        this.refreshPlayers()
+        this.getServerCommands()
     },
     methods: {
         async getServerInfo() {
@@ -27,6 +30,14 @@ export default {
             console.log(response)
             if (response.statusCode === 200) {
                 this.server.name = response.name
+            }
+        },
+        async getServerCommands() {
+            const apiurl = '/api/server/commands/'+this.server.id
+            var response = await (await fetch(apiurl)).json()
+            console.log(response)
+            if (response.statusCode === 200) {
+                this.server.commands = response.commands
             }
         },
         async getServerStatus() {
@@ -38,8 +49,11 @@ export default {
                 this.server.players = response.players
             }
         },
-        async populatePlayers() {
+        async refreshPlayers() {
             this.getServerStatus() // gets the players & the status of the server again
+        },
+        async refreshCommands() {
+            this.getServerCommands() // gets the commands from the latest push from server
         }
     }
 }
@@ -61,9 +75,15 @@ export default {
                 </div>
             </div>
             <Button type="danger">Clear Inputs</Button>
-            <Button @click="populatePlayers">Refresh Players</Button>
+            <Button @click="refreshPlayers">Refresh Players</Button>
+            <Button @click="refreshCommands">Refresh Commands</Button>
             <div class="serverCommands">
-
+                {{ server.commands }}
+                <Command displayname="e">
+                    <span>1</span>
+                    <Input itype="text" placeholder="2" />
+                    <span>3</span>
+                </Command>
             </div>
         </div>
     </div>

@@ -66,10 +66,7 @@ export default {
     border-width: 0px;
     border-style: solid;
     
-    border-top-width: 0.1em;
-    border-top-color: var(--button-border-top);
-    border-bottom-width: 0.1em;
-    border-bottom-color: var(--button-border-btm);
+    box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
 }
 
 .ipt.info {

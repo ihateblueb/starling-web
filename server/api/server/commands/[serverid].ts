@@ -13,8 +13,10 @@ export default defineEventHandler((event) => {
         statusMessage: 'Success',
         // real important api response -- this is filler data while i work out the frontend
         serverID: 1,
-        commands: {
-            "ban": {
+        commands: [
+            {
+                "name": "ban",
+                "displayname": "Ban a user",
                 "command": "cmi ban %username% %reason%",
                 "input": {
                     "enabled": "true",
@@ -26,18 +28,20 @@ export default defineEventHandler((event) => {
                     }
                 }
             },
-            "warn": {
-                "command": "cmi warn %username% %reason%",
+            {
+                "name": "warn",
+                "displayname": "Warn a user",
+                "command": "cmi warn %USERNAME% %REASON%",
                 "input": {
                     "enabled": "true",
-                    "username": {
+                    "USERNAME": {
                         "type": "text"
                     },
-                    "reason": {
+                    "REASON": {
                         "type": "text"
                     }
                 }
             }
-        }
+        ]
     }
 })

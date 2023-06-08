@@ -22,3 +22,5 @@ It's currently still in development, but here's the plan:
 [ ] determine if user is logged in in header & show avatar, username, and panel button 
 
 [ ] add authentication to requests by using session data on request 
+
+[ ] fix undefined head
