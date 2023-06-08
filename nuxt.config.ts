@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     modules: ['@sidebase/nuxt-auth'],
     auth: {
         isEnabled: true,
-        origin: "https://starling.orchidmc.me",
+        origin: "https://starling-beta.orchidmc.me",
         basePath: '/api/auth',
         enableSessionRefreshPeriodically: false,
         enableSessionRefreshOnWindowFocus: true,
