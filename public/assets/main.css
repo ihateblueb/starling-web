@@ -44,6 +44,7 @@
 body {
     margin: 0px;
     background-color: var(--bg-primary);
+    transition: 0s;
 }
 
 h1,
