@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     modules: ['@sidebase/nuxt-auth'],
     auth: {
         isEnabled: true,
-        // for some reason, the origin isn't regustering and causing problems in production
+        // for some reason, the origin isn't regustering and causing problems in production.
         origin: 'https://starling-beta.orchidmc.me', 
         basePath: '/api/auth',
         enableSessionRefreshPeriodically: false,
