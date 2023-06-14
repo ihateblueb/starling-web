@@ -45,7 +45,7 @@ export default {
             var response = await (await fetch(apiurl)).json()
             console.log(response)
             if (response.statusCode === 200) {
-                this.server.playerCount = response.playerCount
+                this.server.playerCount = response.players.length
                 this.server.players = response.players
             }
         },
@@ -66,7 +66,7 @@ export default {
         </div>
         <div class="mainContent serverContent">
             <div class="serverInfoPanel">
-                <h1 class="serverName">{{ server.name }} ({{ server.id }})</h1>
+                <h1 class="serverName">{{ server.name }}</h1>
                 <span class="serverStats">{{ server.playerCount }} player(s) online</span>
             </div>
             <div class="playerList">
@@ -79,11 +79,7 @@ export default {
             <Button @click="refreshCommands">Refresh Commands</Button>
             <div class="serverCommands">
                 {{ server.commands }}
-                <Command displayname="e">
-                    <span>1</span>
-                    <Input itype="text" placeholder="2" />
-                    <span>3</span>
-                </Command>
+                <Command :content="command" v-for="command in server.commands" />
             </div>
         </div>
     </div>

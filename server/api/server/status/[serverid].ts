@@ -14,14 +14,13 @@ export default defineEventHandler((event) => {
         // real important api response -- this is filler data while i work out the frontend
         id: 1,
         status: 'online', // options: online, offline
-        playerCount: 3,
         players: [
             {
                 "name": "BasicBee_",
                 "uuid": "9b4b7545-14fa-44f2-9173-de95510ca8a5"
             },
             {
-                "name": "Gooop00",
+                "name": "Goooop00",
                 "uuid": "0de3fece-1528-46df-918b-531b51656a84"
             },
             {

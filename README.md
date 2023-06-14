@@ -24,3 +24,7 @@ It's currently still in development, but here's the plan:
 [ ] add authentication to requests by using session data on request 
 
 [ ] fix undefined head
+
+[ ] make layout shift less aggressive on the error pages
+
+[ ] make pwa friendly

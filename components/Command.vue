@@ -1,23 +1,22 @@
 <script>
 export default {
     props: {
-        name: String,
-        displayname: String,
-        command: String,
+        content: Object,
     },
     data: () => ({
-        buttonclasses: "btn",
+        name: null,
+        displayname: null,
     }),
     created() {
-        this.getButtonType()
-        this.getWidth()
+        this.getName()
+        this.getDisplayName()
     },
     methods: {
-        async getWidth() {
-            this.widthstyle = "width: " + this.width + "!important;"
+        async getName() {
+            this.name = "cmd-"+this.content.name
         },
-        async getButtonType() {
-            this.buttonclasses = "btn " + this.type
+        async getDisplayName() {
+            this.displayname = this.content.displayname
         }
     }
 }
@@ -25,9 +24,11 @@ export default {
 </script>
 
 <template>
-    <div>
-        <span class="commandLabel">{{ displayname }}</span>
-        <slot></slot>
+    <div :id="name">
+        <p class="commandLabel">{{ displayname }}</p>
+        <div>
+            {{ content.command }}
+        </div>
     </div>
 </template>
 

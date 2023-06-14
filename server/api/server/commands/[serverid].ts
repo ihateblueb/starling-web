@@ -17,13 +17,13 @@ export default defineEventHandler((event) => {
             {
                 "name": "ban",
                 "displayname": "Ban a user",
-                "command": "cmi ban %username% %reason%",
+                "command": "cmi ban %USERNAME% %REASON%",
                 "input": {
                     "enabled": "true",
-                    "username": {
+                    "USERNAME": {
                         "type": "text"
                     },
-                    "reason": {
+                    "REASON": {
                         "type": "text"
                     }
                 }

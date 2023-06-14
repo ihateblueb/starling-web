@@ -7,7 +7,7 @@ export default {
         url: "https://mc-heads.net/avatar/",
     }),
 
-    created() {
+    mounted() {
         this.getHead()
     },
 
