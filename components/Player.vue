@@ -20,6 +20,6 @@ export default {
 </script>
 
 <template>
-    <img class="playerHead" :src="url">
+    <img class="playerHead" :src="url" aria-hidden="true">
     <span class="playerName">{{ name }}</span>
 </template>
