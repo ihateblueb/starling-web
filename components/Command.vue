@@ -38,8 +38,16 @@ export default {
             this.command = result;
             console.log(result);
         },
-        isPlaceholder(item) {
-            return item.startsWith('%') && item.endsWith('%');
+        isTextPlaceholder(item) {
+            if (item.startsWith('%') && item.endsWith('%')) {
+                if (this.content.commands  === text) { // figure out how to search for item's type
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                    return false;
+            }
         },
         checkPlaceholder(placeholder) {
 
@@ -56,8 +64,8 @@ export default {
                 style="color: var(--text3);">{{ content.command }}</span></p>
         <div>
             <template v-for="(item, index) in this.command">
-                <template v-if="isPlaceholder(item)">
-                    <Input :key="index" :placeholder="item" @change="checkPlaceholder(item)" />
+                <template v-if="isTextPlaceholder(item)">
+                    <Input :key="index" :placeholder="item.replace(/%/g, '')" />
                 </template>
                 <template v-else>
                     <span :key="index">{{ item }}</span>
