@@ -107,7 +107,6 @@ export default {
             <Button @click="refreshPlayers">Refresh Players</Button>
             <Button @click="refreshCommands">Refresh Commands</Button>
             <div class="serverCommands">
-                {{ server.commands }}
                 <Command :content="command" v-for="command in server.commands" />
             </div>
         </div>

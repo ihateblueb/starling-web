@@ -17,13 +17,13 @@ export default defineEventHandler((event) => {
             {
                 "name": "ban",
                 "displayname": "Ban a user",
-                "command": "cmi ban %USERNAME% %REASON%",
+                "command": "cmi ban %username% %reason%",
                 "input": {
                     "enabled": "true",
-                    "USERNAME": {
+                    "username": {
                         "type": "text"
                     },
-                    "REASON": {
+                    "reason": {
                         "type": "text"
                     }
                 }
@@ -31,13 +31,13 @@ export default defineEventHandler((event) => {
             {
                 "name": "warn",
                 "displayname": "Warn a user",
-                "command": "cmi warn %USERNAME% %REASON%",
+                "command": "cmi warn %username% %reason%",
                 "input": {
                     "enabled": "true",
-                    "USERNAME": {
+                    "username": {
                         "type": "text"
                     },
-                    "REASON": {
+                    "reason": {
                         "type": "text"
                     }
                 }

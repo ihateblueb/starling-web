@@ -6,18 +6,45 @@ export default {
     data: () => ({
         name: null,
         displayname: null,
+        placeholders: null,
+        command: null,
     }),
     created() {
         this.getName()
         this.getDisplayName()
+        this.handlePlaceholders()
     },
     methods: {
         async getName() {
-            this.name = "cmd-"+this.content.name
+            this.name = "cmd-" + this.content.name
         },
         async getDisplayName() {
             this.displayname = this.content.displayname
+        },
+        async handlePlaceholders() {
+            const regex = /%.*?%/g;
+            var rawcmd = this.content.command
+            const matches = rawcmd.match(regex) || [];
+            const splitCommand = rawcmd.split(regex);
+            const result = splitCommand.reduce((accumulator, value, index) => {
+                if (value) {
+                    accumulator.push(value);
+                }
+                if (index < matches.length) {
+                    accumulator.push(matches[index]);
+                }
+                return accumulator;
+            }, []);
+            this.command = result;
+            console.log(result);
+        },
+        isPlaceholder(item) {
+            return item.startsWith('%') && item.endsWith('%');
+        },
+        checkPlaceholder(placeholder) {
+
         }
+
     }
 }
 
@@ -25,13 +52,19 @@ export default {
 
 <template>
     <div :id="name">
-        <p class="commandLabel">{{ displayname }}</p>
+        <p class="commandLabel">{{ displayname }} <span style="margin-left: 5px; margin-right: 5px;">&bull;</span> <span
+                style="color: var(--text3);">{{ content.command }}</span></p>
         <div>
-            {{ content.command }}
+            <template v-for="(item, index) in this.command">
+                <template v-if="isPlaceholder(item)">
+                    <Input :key="index" :placeholder="item" @change="checkPlaceholder(item)" />
+                </template>
+                <template v-else>
+                    <span :key="index">{{ item }}</span>
+                </template>
+            </template>
         </div>
     </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
