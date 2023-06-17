@@ -274,3 +274,12 @@ a:focus-within {
     font-family: var(--font2);
     text-align: center;
 }
+
+.loadingSubtext {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font1);
+    color: var(--text2);
+    text-align: center;
+}

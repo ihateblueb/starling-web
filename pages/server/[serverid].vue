@@ -89,6 +89,7 @@ export default {
         <div class="mainContent serverContent" v-if="!page.ready">
             <div class="serverInfoPanel">
                 <p class="loadingText">Loading Server Data...</p>
+                <p class="loadingSubtext">Please refresh if this is taking too long</p>
             </div>
         </div>
 

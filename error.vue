@@ -11,7 +11,7 @@ const props = defineProps({
         </div>
         <div class="mainContent errorContent gridContainer">
             <div class="errorHeader">
-                <h1 class="errorCode" :title="error.statusCode">☹️</h1>
+                <h1 class="errorCode" :title="error.statusCode">😞</h1>
                 <h1 class="errorTitle">Uh oh! Something went wrong here.</h1>
                 <br>
                 <p class="errorTitle">{{ error.statusCode }} &bull; {{ error.statusMessage }}</p>
