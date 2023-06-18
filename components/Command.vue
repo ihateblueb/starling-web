@@ -40,7 +40,7 @@ export default {
         },
         isTextPlaceholder(item) {
             if (item.startsWith('%') && item.endsWith('%')) {
-                if (this.content.commands  === text) { // figure out how to search for item's type
+                if (this.content.commands  === "text") { // figure out how to search for items type
                     return true;
                 } else {
                     return false;
