@@ -9,7 +9,7 @@ export default {
         placeholders: null,
         command: null,
     }),
-    created() {
+    mounted() {
         this.getName()
         this.getDisplayName()
         this.handlePlaceholders()

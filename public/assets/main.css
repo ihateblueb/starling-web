@@ -24,12 +24,12 @@
     --accent1-50: #7761FF50;
     --accent2: #5949c1;
 
-    --bg-danger1: #ff5757;
+    --bg-danger1: #F83D3D;
     --bg-warning1: #f89232;
     --bg-success1: #49a749;
     --bg-info1: #9d56ee;
 
-    --bg-danger2: #b63f3f;
+    --bg-danger2: #a82929;
     --bg-warning2: #b46924;
     --bg-success2: #306d30;
     --bg-info2: #7642b2;
@@ -121,9 +121,40 @@ a:focus-within {
     margin-bottom: 10px;
 }
 
+@media (min-width: 1024px) {
+    .feature {
+        margin-left: 80px;
+    }
+}
+
 .feature {
     max-width: 400px;
     grid-column: span 3;
+}
+
+
+.featureImages {
+    margin-top: 50px;
+    grid-column: span 3;
+}
+
+.featureImage {
+    height: 280px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
+}
+
+.featureImageLeft {
+    z-index: 1;
+    rotate: -10deg;
+}
+
+.featureImageRight {
+    z-index: 2;
+    rotate: 10deg;
+    margin-top: 100px;
+    margin-left: 100px;
 }
 
 .featureContainer {

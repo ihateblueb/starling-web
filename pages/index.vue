@@ -14,7 +14,7 @@ import Button from '../components/Button.vue'
                         even when you're offline.
                     </h2>
                     <h3 class="pageHeaderSubtext">
-                        With Starling, you and your team can always be connected.
+                        With Starling, you and your team can always be prepared for anything.
                     </h3>
                     <Button href="/register" type="dark noleft">Register</Button>
                 </div>
@@ -22,12 +22,16 @@ import Button from '../components/Button.vue'
         </div>
         <div class="mainContent">
             <div class="featureContainer homepageGrid">
+                <div class="featureImages">
+                    <img class="featureImage featureImageLeft" src="/assets/featurecard1b.webp">
+                    <img class="featureImage featureImageRight" src="/assets/featurecard1a.webp">
+                </div>
                 <div class="feature">
                     <h2 class="featureTitle">
-                        Allow your moderators to run commands you define.
+                        Allow your moderators to run commands that you define.
                     </h2>
                     <p class="featureDescription">
-                        All in an easy yet advanced configuration, you can define what commands you'd like your moderators to have access to with palceholders and more.
+                        All in an easy yet advanced configuration, you choose what commands you'd like your moderators to have access to with palceholders and more.
                     </p>
                 </div>
             </div>
