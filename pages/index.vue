@@ -32,6 +32,9 @@ import Button from '../components/Button.vue'
                     </h2>
                     <p class="featureDescription">
                         All in an easy yet advanced configuration, you choose what commands you'd like your moderators to have access to with palceholders and more.
+                        <br><br>
+                        MOVE TO ANOTHER FEATURE:
+                        It's not just text inputs either- use predefined options with dropdowns and easy additions with checkboxes.
                     </p>
                 </div>
             </div>
