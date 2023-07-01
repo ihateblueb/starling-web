@@ -129,7 +129,7 @@ a:focus-within {
 
 .feature {
     max-width: 400px;
-    grid-column: span 3;
+    grid-column: span 4;
 }
 
 
@@ -142,7 +142,7 @@ a:focus-within {
     height: 280px;
     border-radius: 20px;
     position: absolute;
-    box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
+    border: solid 2px var(--button-shadow);
 }
 
 .featureImageLeft {
@@ -175,6 +175,8 @@ a:focus-within {
     font-family: var(--font1);
     color: var(--text2);
     font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
