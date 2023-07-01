@@ -66,6 +66,13 @@ export default {
     transform: scale(90%);
 }
 
+.transparent {
+    padding-left: 0em;
+    padding-right: 0em;
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .noleft {
     margin-left: 0px !important;
 }

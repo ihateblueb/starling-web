@@ -58,12 +58,13 @@ export default {
 
         <div class="mainContent serverContent" v-if="page.ready">
             <div class="serverInfoPanel">
+                <Button type="noleft transparent" :href="'/server/'+server.id">← Return to Server</Button>
                 <h1 class="serverName">Settings</h1>
-                <span class="serverStats">{{ server.name }}</span>
+                <span class="serverStats">{{ server.name }} (Server ID: {{ server.id }})</span>
             </div>
             <br>
-            <Button @click="refreshPlayers">Add a Moderator</Button>
-            <Button @click="refreshCommands">Add an Admin</Button>
+            <Button type="noleft">Add a Moderator</Button>
+            <Button>Add an Admin</Button>
             <Button type="danger">Delete Server</Button>
         </div>
     </div>

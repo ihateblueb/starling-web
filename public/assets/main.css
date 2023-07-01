@@ -316,3 +316,12 @@ a:focus-within {
     color: var(--text2);
     text-align: center;
 }
+
+.serverInfoPanelFlex {
+    display: flex;
+    align-items: center;
+}
+
+.serverInfoArea {
+    flex-grow: 3;
+}

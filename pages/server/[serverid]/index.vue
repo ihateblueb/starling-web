@@ -94,9 +94,14 @@ export default {
         </div>
 
         <div class="mainContent serverContent" v-if="page.ready">
-            <div class="serverInfoPanel">
-                <h1 class="serverName">{{ server.name }}</h1>
-                <span class="serverStats">{{ server.playerCount }} player(s) online</span>
+            <div class="serverInfoPanel serverInfoPanelFlex">
+                <div class="serverInfoArea">
+                    <h1 class="serverName">{{ server.name }}</h1>
+                    <span class="serverStats">{{ server.playerCount }} player(s) online</span>
+                </div>
+                <div class="settingsArea">
+                    <Button :href="'/server/'+server.id+'/settings'">Open Settings</Button>
+                </div>
             </div>
             <div class="playerList">
                 <div class="playerListInner">
