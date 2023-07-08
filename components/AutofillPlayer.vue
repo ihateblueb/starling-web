@@ -13,7 +13,7 @@ export default {
 <template>
     <div class="playerContainer">
         <div class="playerContent">
-            <Player :name="name" />
+            <Player :name="name" v-if="name" />
             <Button type="dark">Autofill</Button>
         </div>
     </div>
