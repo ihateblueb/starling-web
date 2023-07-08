@@ -46,6 +46,9 @@ export default {
 
 <template>
     <div>
+        <div class="loadingBar">
+            <div class="loadingIndicator" v-bind:class="{ liActive: !page.ready }"></div>
+        </div>
         <div class="pageHeader">
             <Header />
         </div>
