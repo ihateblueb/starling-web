@@ -17,8 +17,8 @@ const props = defineProps({
                 <p class="errorTitle">{{ error.statusCode }} &bull; {{ error.statusMessage }}</p>
                 <br><br>
                 <Button href="/" type="noleft">Return Home</Button>
-                <Button href="https://twitter.com/starlingmod">Check Server Status</Button>
-                <Button href="https://twitter.com/starlingmod">Get Help</Button>
+                <Button href="/status">Check Server Status</Button>
+                <Button href="/help">Get Help</Button>
             </div>
         </div>
     </div>

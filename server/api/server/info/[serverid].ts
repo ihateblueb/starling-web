@@ -8,13 +8,20 @@ export default defineEventHandler((event) => {
     }
     // check if user is real
     // check if user has permission
-    return {
-        statusCode: 200,
-        statusMessage: 'Success',
-        // real important api response -- this is filler data while i work out the frontend
-        name: 'Orchid',
-        id: 1,
-        owner: '1',
-        moderators: ['2','3','4','5','6']
+    if (serverid === 1) {
+        return {
+            statusCode: 200,
+            statusMessage: 'Success',
+            // real important api response -- this is filler data while i work out the frontend
+            name: 'Orchid',
+            id: 1,
+            owner: '1',
+            moderators: ['2','3','4','5','6']
+        }
+    } else {
+        throw createError({
+            statusCode: 404,
+            statusMessage: 'This server could not be found',
+        })
     }
 })
