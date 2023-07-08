@@ -40,17 +40,10 @@ export default {
         },
         isTextPlaceholder(item) {
             if (item.startsWith('%') && item.endsWith('%')) {
-                if (this.content.commands  === "text") { // figure out how to search for items type
-                    return true;
-                } else {
-                    return false;
-                }
+                return true;
             } else {
                     return false;
             }
-        },
-        checkPlaceholder(placeholder) {
-
         }
 
     }
@@ -59,18 +52,19 @@ export default {
 </script>
 
 <template>
-    <div :id="name">
-        <p class="commandLabel">{{ displayname }} <span style="margin-left: 5px; margin-right: 5px;">&bull;</span> <span
-                style="color: var(--text3);">{{ content.command }}</span></p>
+    <div :id="name" class="commandContainer">
+        <p class="commandLabel">{{ displayname }} <span style="margin-left: 5px; margin-right: 5px;"></span></p>
         <div>
             <template v-for="(item, index) in this.command">
                 <template v-if="isTextPlaceholder(item)">
                     <Input :key="index" :placeholder="item.replace(/%/g, '')" />
                 </template>
                 <template v-else>
-                    <span :key="index">{{ item }}</span>
+                    <span :key="index" class="comamndText">{{ item }}</span>
                 </template>
             </template>
+            <br>
+            <Button type="noleft">Submit</Button>
         </div>
     </div>
 </template>

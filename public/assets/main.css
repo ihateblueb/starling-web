@@ -325,3 +325,20 @@ a:focus-within {
 .serverInfoArea {
     flex-grow: 3;
 }
+
+.commandLabel {
+    font-family: var(--font2);
+    font-weight: 600;
+
+    padding-bottom: 5px;
+}
+
+.comamndText {
+    font-family: var(--font1);
+    padding-bottom: 5px;
+}
+
+.commandContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
