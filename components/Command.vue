@@ -10,9 +10,20 @@ export default {
         command: null,
     }),
     mounted() {
-        this.getName()
-        this.getDisplayName()
-        this.handlePlaceholders()
+        if (this.content.name) { // this will ensure that the content is loaded
+            console.log("Loaded comamnd " + this.content.name)
+            this.getName()
+            this.getDisplayName()
+            this.handlePlaceholders()
+        } else {
+            const unwatch = this.$watch('content.name', () => {
+                console.log("Loaded comamnd " + this.content.name)
+                this.getName()
+                this.getDisplayName()
+                this.handlePlaceholders()
+                unwatch()
+            })
+        }
     },
     methods: {
         async getName() {
@@ -42,8 +53,11 @@ export default {
             if (item.startsWith('%') && item.endsWith('%')) {
                 return true;
             } else {
-                    return false;
+                return false;
             }
+        },
+        executeCommand(name) {
+            console.log("Command " + name + " executed.")
         }
 
     }
@@ -64,7 +78,7 @@ export default {
                 </template>
             </template>
             <br>
-            <Button type="noleft">Submit</Button>
+            <Button type="noleft" @click="executeCommand(name)">Submit</Button>
         </div>
     </div>
 </template>

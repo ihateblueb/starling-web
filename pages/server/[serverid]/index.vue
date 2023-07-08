@@ -75,7 +75,7 @@ export default {
             this.getServerStatus() // gets the players & the status of the server again
         },
         async refreshCommands() {
-            this.getServerCommands() // gets the commands from the latest push from server
+            this.getServerCommands()
         }
     }
 }
