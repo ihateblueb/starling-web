@@ -83,12 +83,15 @@ export default {
 
 <template>
     <div>
+        <div class="loadingBar">
+            <div class="loadingIndicator" v-bind:class="{ liActive: !page.ready }"></div>
+        </div>
         <div class="pageHeader">
             <Header />
         </div>
         <div class="mainContent serverContent" v-if="!page.ready">
             <div class="serverInfoPanel">
-                <p class="loadingText">Loading Server Data...</p>
+                <p class="loadingText">Loading Server...</p>
                 <p class="loadingSubtext">Please refresh if this is taking too long</p>
             </div>
         </div>
