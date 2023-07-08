@@ -17,7 +17,7 @@ export default {
         <div class="headerContent">
             <div class="wordmark" @click="sendHome()">
                 <div class="smallLogo">
-                    <img class="smallLogoImage" src="https://assets.orchidmc.me/starling/logo.png">
+                    <img class="smallLogoImage" src="/assets/logo.webp">
                 </div>
                 <span class="brandName">Starling</span>
             </div>
