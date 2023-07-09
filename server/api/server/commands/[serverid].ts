@@ -8,40 +8,48 @@ export default defineEventHandler((event) => {
     }
     // check if user is real
     // check if user has permission
-    return {
-        statusCode: 200,
-        statusMessage: 'Success',
-        // real important api response -- this is filler data while i work out the frontend
-        serverID: 1,
-        commands: [
-            {
-                "name": "ban",
-                "displayname": "Ban a user",
-                "command": "cmi ban %username% %reason%",
-                "input": {
-                    "enabled": "true",
-                    "username": {
-                        "type": "text"
-                    },
-                    "reason": {
-                        "type": "text"
+    if (serverid === 0) {
+        return {
+            statusCode: 200,
+            statusMessage: 'Success',
+            // real important api response -- this is filler data while i work out the frontend
+            serverID: 0,
+            commands: [
+                {
+                    "name": "ban",
+                    "displayname": "Ban a user",
+                    "command": "cmi ban %username% %reason%",
+                    "input": {
+                        "enabled": "true",
+                        "username": {
+                            "type": "text"
+                        },
+                        "reason": {
+                            "type": "text"
+                        }
+                    }
+                },
+                {
+                    "name": "warn",
+                    "displayname": "Warn a user",
+                    "command": "cmi warn %username% %reason%",
+                    "input": {
+                        "enabled": "true",
+                        "username": {
+                            "type": "text"
+                        },
+                        "reason": {
+                            "type": "text"
+                        }
                     }
                 }
-            },
-            {
-                "name": "warn",
-                "displayname": "Warn a user",
-                "command": "cmi warn %username% %reason%",
-                "input": {
-                    "enabled": "true",
-                    "username": {
-                        "type": "text"
-                    },
-                    "reason": {
-                        "type": "text"
-                    }
-                }
-            }
-        ]
+            ]
+        }
+    } else {
+        throw createError({
+            statusCode: 404,
+            statusMessage: 'A server by this id could not be found',
+        })
     }
+    
 })
