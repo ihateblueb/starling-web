@@ -59,7 +59,6 @@ export default {
     border-radius: 0.75em;
 
     box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
-    
 }
 
 .btn:active {
@@ -77,8 +76,12 @@ export default {
     margin-left: 0px !important;
 }
 
-.btn:hover.undefined {
+.btn:hover, .btn:hover.undefined {
     background-color: var(--bg-secondary-alt);
+}
+
+.btn.undefined {
+    background-color: var(--bg-secondary);
 }
 
 .btn.info {

@@ -1,7 +1,5 @@
 <script setup>
-import AutofillPlayer from '../../../components/AutofillPlayer.vue';
 import Input from '../../../components/Input.vue';
-import Command from '../../../components/Command.vue';
 </script>
 
 <script>
