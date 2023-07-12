@@ -57,6 +57,14 @@ p {
     margin: 0px;
 }
 
+::-moz-selection {
+    background: var(--accent1);
+}
+
+::selection {
+    background: var(--accent1);
+}
+
 .btn:focus-within,
 .ipt:focus-within,
 a:focus-within {
