@@ -61,7 +61,7 @@ export default {
             <div class="serverInfoPanel">
                 <Button type="noleft transparent" :href="'/server/'+server.id">← Return to Server</Button>
                 <h1 class="serverName">Settings</h1>
-                <span class="serverStats">{{ server.name }} (Server ID: {{ server.id }})</span>
+                <span class="serverStats">{{ server.name }} &bull; Server ID: {{ server.id }}</span>
             </div>
             <br>
             <Button type="noleft">Add a Moderator</Button>

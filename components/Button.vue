@@ -72,6 +72,11 @@ export default {
     box-shadow: none;
 }
 
+
+.btn.transparent:hover {
+    background-color: transparent;
+}
+
 .noleft {
     margin-left: 0px !important;
 }
