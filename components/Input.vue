@@ -69,6 +69,14 @@ export default {
     box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
 }
 
+.noleft {
+    margin-left: 0px !important;
+}
+
+.noright {
+    margin-right: 0px !important;
+}
+
 .ipt.info {
     background-color: var(--bg-info1);
 }

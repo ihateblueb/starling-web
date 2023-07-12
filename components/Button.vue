@@ -61,6 +61,14 @@ export default {
     box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
 }
 
+.noleft {
+    margin-left: 0px !important;
+}
+
+.noright {
+    margin-right: 0px !important;
+}
+
 .btn:active {
     transform: scale(90%);
 }
@@ -75,10 +83,6 @@ export default {
 
 .btn.transparent:hover {
     background-color: transparent;
-}
-
-.noleft {
-    margin-left: 0px !important;
 }
 
 .btn:hover, .btn:hover.undefined {

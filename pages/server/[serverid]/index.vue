@@ -114,8 +114,6 @@ export default {
                 </div>
             </div>
             <Button type="danger">Clear Inputs</Button>
-            <Button @click="refreshPlayers">Refresh Players</Button>
-            <Button @click="refreshCommands">Refresh Commands</Button>
             <div class="serverCommands">
                 <Command :content="command" v-for="command in server.commands" />
             </div>

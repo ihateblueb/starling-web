@@ -71,7 +71,7 @@ export default {
         <div>
             <template v-for="(item, index) in this.command">
                 <template v-if="isTextPlaceholder(item)">
-                    <Input :key="index" :placeholder="item.replace(/%/g, '')" />
+                    <Input type="noleft noright" :key="index" :placeholder="item.replace(/%/g, '')" />
                 </template>
                 <template v-else>
                     <span :key="index" class="comamndText">{{ item }}</span>

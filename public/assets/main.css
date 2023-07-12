@@ -344,6 +344,7 @@ a:focus-within {
 .comamndText {
     font-family: var(--font1);
     padding-bottom: 5px;
+    padding-right: 10px;
 }
 
 .commandContainer {
@@ -371,7 +372,8 @@ a:focus-within {
 .loadingIndicator.liActive {
     display: block;
     background-color: var(--accent1);
-    height: 1px;
+    height: 3px;
+    border-radius: 10px;
 
     animation-name: loading;
     animation-duration: 3s;
@@ -381,4 +383,8 @@ a:focus-within {
 .serverListTitle {
     font-family: var(--font2);
     color: var(--text1);
+}
+
+.lbSetupPage {
+    padding-top: 15px;
 }

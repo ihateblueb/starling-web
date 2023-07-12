@@ -1,13 +1,18 @@
 <script>
 export default {
     data: () => ({
-        step: "start"
+        step: "start",
+        serverLinked: false
     })
 }
 </script>
 
 <template>
     <div>
+        <div class="pageHeader">
+            <Header />
+        </div>
+
         <div class="mainContent loginContent" v-if="step === 'start'">
             <div class="loginContainer">
                 <h2 class="loginHeader">
@@ -52,10 +57,14 @@ export default {
                 <h2 class="loginHeader">
                     Please run <code>/starling setup MasTGbm3zi7x181XdtcC</code> on your server and wait.
                 </h2>
-                <!-- id like to add an indicator here on connection status -->
                 <p class="loginDescription">
                     After this you'll be able to configure your server.
                 </p>
+
+                <div class="loadingBar lbSetupPage">
+                    <div class="loadingIndicator" v-bind:class="{ liActive: !serverLinked }"></div>
+                </div>
+
                 <div class="loginInputs">
                     <Button @click="this.step = 'admin2'" width="250px" type="danger">
                         <div class="loginButtonInner">
