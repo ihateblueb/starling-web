@@ -377,3 +377,8 @@ a:focus-within {
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
+
+.serverListTitle {
+    font-family: var(--font2);
+    color: var(--text1);
+}
