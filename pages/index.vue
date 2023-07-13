@@ -10,10 +10,10 @@ export default {
     }),
     mounted() {
         const { status, data } = useAuth()
-        this.userinfo = data.value.user
         if (status.value === "authenticated") {
+            this.userinfo = data.value.user
             this.loggedin = true
-        } else if (status.value === "unauthenticated") {
+        } else {
             this.loggedin = false
         }
     }
