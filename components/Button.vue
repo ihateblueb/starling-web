@@ -4,6 +4,7 @@ export default {
         type: String,
         href: String,
         width: String,
+        icon: String,
     },
     data: () => ({
         buttonclasses: "btn",
@@ -25,8 +26,20 @@ export default {
 </script>
 
 <template>
-    <a :class="buttonclasses" :style="widthstyle" :href="href">
-        <slot></slot>
+    <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="icon">
+        <div class="btnIconCtn">
+            <Icon :name="icon" color="#ffffff" size="16" />
+            <span style="margin-left: 6px;">
+                <slot></slot>
+            </span>
+        </div>
+    </a>
+    <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="!icon">
+        <div class="btnIconCtn">
+            <span>
+                <slot></slot>
+            </span>
+        </div>
     </a>
 </template>
 
@@ -61,6 +74,11 @@ export default {
     box-shadow: inset 0px -2px 3px -1px var(--button-shadow);
 }
 
+.btnIconCtn {
+    display: flex;
+    align-items: center;
+}
+
 .noleft {
     margin-left: 0px !important;
 }
@@ -85,7 +103,8 @@ export default {
     background-color: transparent;
 }
 
-.btn:hover, .btn:hover.undefined {
+.btn:hover,
+.btn:hover.undefined {
     background-color: var(--bg-secondary-alt);
 }
 

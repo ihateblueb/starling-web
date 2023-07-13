@@ -390,3 +390,8 @@ a:focus-within {
 .lbSetupPage {
     padding-top: 15px;
 }
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+}
