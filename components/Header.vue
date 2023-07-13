@@ -4,6 +4,19 @@ import Button from '../components/Button.vue'
 
 <script>
 export default {
+    data: () => ({
+        loggedin: false,
+        userinfo: null,
+    }),
+    mounted() {
+        const { status, data } = useAuth()
+        this.userinfo = data.value.user
+        if (status.value === "authenticated") {
+            this.loggedin = true
+        } else if (status.value === "unauthenticated") {
+            this.loggedin = false
+        }
+    },
     methods: {
         sendHome() {
             window.location = '/';
@@ -26,8 +39,12 @@ export default {
                 <a class="headerLink" href="https://github.com/livelaughlemon/starling">Contribute</a>
                 <a class="headerLink" href="https://modrinth.com">Download</a>
             </div>
-            <div class="accountArea">
+            <div class="accountArea" v-if="!loggedin">
                 <Button type="accent" href="/login">Login</Button>
+            </div>
+            <div class="accountArea" v-if="loggedin">
+                <a class="username" href="/user">{{ userinfo.name }}</a>
+                <img class="avatar" :src="userinfo.image" />
             </div>
         </div>
     </div>
@@ -126,5 +143,38 @@ export default {
 .smallLogoImage {
     height: 35px;
     width: 35px;
+}
+
+.accountArea {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.username {
+    margin-right: 10px;
+    margin-left: 10px;
+
+    color: var(--text1);
+    font-family: var(--font1);
+    font-weight: 400;
+    font-size: 16px;
+
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.username:hover {
+    color: var(--text3);
+    transition: 0.1s;
+}
+
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 </style>
