@@ -4,6 +4,7 @@ import Input from '../../../components/Input.vue';
 import Command from '../../../components/Command.vue';
 </script>
 
+
 <script>
 export default {
     data: () => ({

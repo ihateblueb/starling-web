@@ -3,6 +3,23 @@ import Header from '../components/Header.vue'
 import Button from '../components/Button.vue'
 </script>
 
+<script>
+export default {
+    data: () => ({
+        loggedin: false,
+    }),
+    mounted() {
+        const { status, data } = useAuth()
+        this.userinfo = data.value.user
+        if (status.value === "authenticated") {
+            this.loggedin = true
+        } else if (status.value === "unauthenticated") {
+            this.loggedin = false
+        }
+    }
+}
+</script>
+
 <template>
     <div class="homepage">
         <div class="pageHeader">
@@ -16,7 +33,8 @@ import Button from '../components/Button.vue'
                     <h3 class="pageHeaderSubtext">
                         With Starling, you and your team can always be prepared for anything.
                     </h3>
-                    <Button href="/register" type="dark noleft">Register</Button>
+                    <Button href="/register" type="dark noleft" v-if="!loggedin">Register</Button>
+                    <Button href="/panel" type="dark noleft" v-if="loggedin">Open Panel</Button>
                 </div>
             </div>
         </div>

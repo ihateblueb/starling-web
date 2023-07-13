@@ -59,10 +59,12 @@ p {
 
 ::-moz-selection {
     background: var(--accent1);
+    color: #ffffff;
 }
 
 ::selection {
     background: var(--accent1);
+    color: #ffffff;
 }
 
 .btn:focus-within,

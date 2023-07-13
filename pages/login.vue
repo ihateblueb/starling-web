@@ -10,6 +10,7 @@ definePageMeta({
         navigateAuthenticatedTo: '/panel',
     }
 })
+
 const { signIn } = useAuth()
 </script>
 
