@@ -65,8 +65,8 @@ export default {
             </div>
             <br>
             <div class="buttonContainer">
-                <Button type="noleft">Add a Moderator</Button>
-                <Button>Add an Admin</Button>
+                <Button type="noleft">Add Moderator</Button>
+                <Button>Add Admin</Button>
                 <Button type="danger" icon="trash">Delete Server</Button>
             </div>
         </div>
