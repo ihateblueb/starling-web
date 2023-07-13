@@ -7,7 +7,7 @@ import GitHubIcon from '../components/icons/GithubIcon.vue'
 definePageMeta({
     auth: {
         unauthenticatedOnly: true,
-        navigateAuthenticatedTo: '/',
+        navigateAuthenticatedTo: '/panel',
     }
 })
 const { signIn } = useAuth()

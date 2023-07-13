@@ -13,17 +13,7 @@ export default defineNuxtConfig({
     pages: true,
     modules: ['@sidebase/nuxt-auth'],
     auth: {
-        isEnabled: true,
-        origin: process.env.AUTH_ORIGIN, 
-        basePath: '/api/auth',
-        enableSessionRefreshPeriodically: false,
-        enableSessionRefreshOnWindowFocus: true,
-        globalAppMiddleware: false,
-        defaultProvider: undefined,
-        addDefaultCallbackUrl: true,
-        globalMiddlewareOptions: {
-            allow404WithoutAuth: true,
-            addDefaultCallbackUrl: true
-        }
+      origin: process.env.AUTH_ORIGIN,
+      enableGlobalAppMiddleware: true
     }
 })
