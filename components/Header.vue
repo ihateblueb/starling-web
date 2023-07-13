@@ -40,11 +40,14 @@ export default {
                 <a class="headerLink" href="https://modrinth.com">Download</a>
             </div>
             <div class="accountArea" v-if="!loggedin">
-                <Button type="accent" href="/login">Login</Button>
+                <Button type="accent" href="/login" icon="log-in">Login</Button>
             </div>
             <div class="accountArea" v-if="loggedin">
                 <a class="username" href="/user">{{ userinfo.name }}</a>
                 <img class="avatar" :src="userinfo.image" />
+                <span style="margin-left: 5px;">
+                    <Button type="transparent" href="/api/auth/signout" icon="log-out" />
+                </span>
             </div>
         </div>
     </div>
