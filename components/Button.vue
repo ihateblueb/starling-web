@@ -27,19 +27,17 @@ export default {
 
 <template>
     <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="icon">
-        <div class="btnIconCtn">
+        <span class="btnIconCtn">
             <Icon :name="icon" color="#ffffff" size="16" />
             <span style="margin-left: 6px;">
                 <slot></slot>
             </span>
-        </div>
+        </span>
     </a>
     <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="!icon">
-        <div class="btnIconCtn">
-            <span>
-                <slot></slot>
-            </span>
-        </div>
+        <span class="btnIconCtn">
+            <slot></slot>
+        </span>
     </a>
 </template>
 
@@ -76,6 +74,7 @@ export default {
 
 .btnIconCtn {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 

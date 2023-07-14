@@ -29,16 +29,10 @@ const { signIn } = useAuth()
                 </p>
                 <div class="loginInputs">
                     <Button @click="signIn('discord')" width="250px" type="discord">
-                        <div class="loginButtonInner">
-                            <DiscordIcon />
                             Login with Discord
-                        </div>
                     </Button>
                     <Button @click="signIn('github')" width="250px" type="github">
-                        <div class="loginButtonInner">
-                            <GitHubIcon />
-                            Login with GitHub
-                        </div>
+                        Login with GitHub
                     </Button>
                 </div>
             </div>
