@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Header from '../components/Header.vue'
 import Button from '../components/Button.vue'
 import DiscordIcon from '../components/icons/DiscordIcon.vue'
@@ -12,6 +12,11 @@ definePageMeta({
 })
 
 const { signIn } = useAuth()
+</script>
+
+<script>
+export default {
+}
 </script>
 
 <template>
@@ -28,12 +33,18 @@ const { signIn } = useAuth()
                     Don't have an account? <a class="loginDescriptionLink" href="/register">Register</a>.
                 </p>
                 <div class="loginInputs">
-                    <Button @click="signIn('discord')" width="250px" type="discord">
+                    <LoginButton @click="signIn('discord')" width="250px" type="discord">
+                        <div class="loginButtonInner">
+                            <DiscordIcon />
                             Login with Discord
-                    </Button>
-                    <Button @click="signIn('github')" width="250px" type="github">
-                        Login with GitHub
-                    </Button>
+                        </div>
+                    </LoginButton>
+                    <LoginButton @click="signIn('github')" width="250px" type="github">
+                        <div class="loginButtonInner">
+                            <GitHubIcon />
+                            Login with GitHub
+                        </div>
+                    </LoginButton>
                 </div>
             </div>
         </div>

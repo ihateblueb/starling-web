@@ -74,11 +74,9 @@ export default {
         },
         async refreshPlayers() {
             this.getServerStatus() // gets the players & the status of the server again
-            this.$forceUpdate()
         },
         async refreshCommands() {
             this.getServerCommands()
-            this.$forceUpdate()
         }
     }
 }
