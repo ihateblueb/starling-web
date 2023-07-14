@@ -8,12 +8,17 @@ export default defineEventHandler((event) => {
     }
     // check if user is real
     // check if user has permission
-    return {
-        statusCode: 200,
-        statusMessage: 'Success',
-        // real important api response -- this is filler data while i work out the frontend
-        id: 1,
-        name: 'blueb',
-        avatar: 'https://api.orchidmc.me/v2/discord/avatar/403390454273409028',
+    if (userid === 0) {
+        return {
+            statusCode: 200,
+            statusMessage: 'Success',
+            // real important api response -- this is filler data while i work out the frontend
+            id: 0,
+        }
+    } else {
+        throw createError({
+            statusCode: 404,
+            statusMessage: 'A server by this id could not be found',
+        })
     }
 })
