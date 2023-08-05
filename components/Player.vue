@@ -13,7 +13,11 @@ export default {
 
     methods: {
         async getHead() {
+            if (this.name === "") {
+                this.url = "/assets/unknown-user.webp"
+            } else {
             this.url = "https://mc-heads.net/avatar/" + this.name
+            }
         }
     }
 }

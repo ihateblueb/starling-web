@@ -36,7 +36,7 @@ export default {
             </div>
             <div class="headerLinksArea">
                 <a class="headerLink" href="https://discord.gg/">Support</a>
-                <a class="headerLink" href="https://github.com/livelaughlemon/starling">Contribute</a>
+                <a class="headerLink" href="https://github.com/ihateblueb/starling">Contribute</a>
                 <a class="headerLink" href="https://modrinth.com">Download</a>
             </div>
             <div class="accountArea" v-if="loggedin">
