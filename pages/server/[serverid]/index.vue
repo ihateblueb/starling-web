@@ -117,5 +117,8 @@ export default {
                 <Command :content="command" v-for="command in server.commands" />
             </div>
         </div>
+
+        <Footer />
+
     </div>
 </template>

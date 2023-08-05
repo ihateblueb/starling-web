@@ -70,5 +70,8 @@ export default {
                 <Button type="danger" icon="trash">Delete Server</Button>
             </div>
         </div>
+
+        <Footer />
+        
     </div>
 </template>

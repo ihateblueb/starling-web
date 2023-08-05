@@ -53,6 +53,7 @@ import Button from '../components/Button.vue'
 }
 
 .footer {
+    padding-top: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
