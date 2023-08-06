@@ -87,9 +87,6 @@ export default {
         <div class="loadingBar">
             <div class="loadingIndicator" v-bind:class="{ liActive: !page.ready }"></div>
         </div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent serverContent" v-if="!page.ready">
             <div class="serverInfoPanel">
                 <p class="loadingText">Loading Server...</p>
@@ -117,8 +114,5 @@ export default {
                 <Command :content="command" v-for="command in server.commands" />
             </div>
         </div>
-
-        <Footer />
-
     </div>
 </template>

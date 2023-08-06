@@ -47,9 +47,6 @@ export default {
         <div class="loadingBar">
             <div class="loadingIndicator" v-bind:class="{ liActive: !page.ready }"></div>
         </div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent serverContent" v-if="!page.ready">
             <div class="serverInfoPanel">
                 <p class="loadingText">Loading Server Data...</p>
@@ -70,8 +67,5 @@ export default {
                 <Button type="danger" icon="trash">Delete Server</Button>
             </div>
         </div>
-
-        <Footer />
-        
     </div>
 </template>

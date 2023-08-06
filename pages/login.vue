@@ -1,5 +1,4 @@
 <script setup>
-import Header from '../components/Header.vue'
 import Button from '../components/Button.vue'
 import DiscordIcon from '../components/icons/DiscordIcon.vue'
 import GitHubIcon from '../components/icons/GithubIcon.vue'
@@ -21,9 +20,6 @@ export default {
 
 <template>
     <div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent loginContent">
             <div class="loginContainer">
                 <h2 class="loginHeader">
@@ -48,8 +44,5 @@ export default {
                 </div>
             </div>
         </div>
-
-        <Footer />
-
     </div>
 </template>

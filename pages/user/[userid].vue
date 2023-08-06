@@ -53,9 +53,6 @@ export default {
         <div class="loadingBar">
             <div class="loadingIndicator" v-bind:class="{ liActive: !page.ready }"></div>
         </div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent serverContent" v-if="!page.ready">
             <div class="serverInfoPanel">
                 <p class="loadingText">Loading Your Data...</p>
@@ -74,9 +71,6 @@ export default {
                 </div>
             </div>
         </div>
-
-        <Footer />
-        
     </div>
 </template>
 

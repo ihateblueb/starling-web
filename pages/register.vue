@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Header from '../components/Header.vue'
 import Button from '../components/Button.vue'
 import DiscordIcon from '../components/icons/DiscordIcon.vue'
 import GitHubIcon from '../components/icons/GithubIcon.vue'
@@ -15,9 +14,6 @@ const { signIn } = useAuth()
 
 <template>
     <div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent loginContent">
             <div class="loginContainer">
                 <h2 class="loginHeader">
@@ -42,8 +38,5 @@ const { signIn } = useAuth()
                 </div>
             </div>
         </div>
-
-        <Footer />
-        
     </div>
 </template>

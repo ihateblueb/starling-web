@@ -25,22 +25,42 @@ import Button from '../components/Button.vue'
                     <br>
                 </div>
                 <div class="footerColumn2">
-                    <p class="footerBrandText">Contribute</p>
-                    <p class="footerBrandText">Report a Bug</p>
-                    <p class="footerBrandText">Get Support</p>
+                    <p class="footerBrandText">
+                        <a href="">Contribute</a>
+                    </p>
+                    <p class="footerBrandText">
+                        <a href="">Report a Bug</a>
+                    </p>
+                    <p class="footerBrandText">
+                        <a href="">Get Support</a>
+                    </p>
                     <br>
-                    <p class="footerBrandText">Download (Modrinth)</p>
-                    <p class="footerBrandText">Download (GitHub)</p>
+                    <p class="footerBrandText">
+                        <a href="">Download (Modrinth)</a>
+                    </p>
+                    <p class="footerBrandText">
+                        <a href="">Download (GitHub)</a>
+                    </p>
                     <br>
                 </div>
                 <div class="footerColumn3">
-                    <p class="footerBrandText">Privacy Policy</p>
-                    <p class="footerBrandText">Terms of Service</p>
+                    <p class="footerBrandText">
+                        <a href="/legal/privacy">Privacy Policy</a>
+                    </p>
+                    <p class="footerBrandText">
+                        <a href="/legal/terms">Terms of Service</a>
+                    </p>
                     <br>
-                    <p class="footerBrandText">About Starling</p>
-                    <p class="footerBrandText">About Orchid Development</p>
+                    <p class="footerBrandText">
+                        <a  href="/">About Starling</a>
+                    </p>
+                    <p class="footerBrandText">
+                        <a href="https://dev.orchidmc.me">About Orchid Development</a>
+                    </p>
                     <br>
-                    <p class="footerBrandText">Service Status</p>
+                    <p class="footerBrandText">
+                        <a href="">Service Status</a>
+                    </p>
                     <br>
                 </div>
         </div>
@@ -48,10 +68,6 @@ import Button from '../components/Button.vue'
 </template>
   
 <style>
-.footerColumn1 {
-
-}
-
 .footer {
     padding-top: 70px;
     width: 100%;
@@ -74,11 +90,12 @@ import Button from '../components/Button.vue'
     gap: 0 20px;
 }
 
-.footerBrandText {
+.footerBrandText, .footerBrandText a {
     color: var(--text2);
     font-family: var(--font1);
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 .footerBrandName {

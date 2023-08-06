@@ -1,7 +1,5 @@
 <script setup>
-import Header from '../components/Header.vue'
 import Button from '../components/Button.vue'
-import Footer from '../components/Footer.vue'
 </script>
 
 <script>
@@ -24,7 +22,6 @@ export default {
 <template>
     <div class="homepage">
         <div class="pageHeader">
-            <Header />
             <div class="pageHeaderContent homepageGrid">
                 <div class="pageHeaderTextContainer">
                     <h2 class="pageHeaderText">
@@ -32,7 +29,7 @@ export default {
                         even when you're offline.
                     </h2>
                     <h3 class="pageHeaderSubtext">
-                        With Starling, you and your team can always be prepared for anything.
+                        With Starling, you and your team can always be prepared to respond to anything.
                     </h3>
                     <Button href="/register" type="dark noleft" v-if="!loggedin">Register</Button>
                     <Button href="/panel" type="dark noleft" v-if="loggedin">Open Panel</Button>
@@ -45,7 +42,7 @@ export default {
                 </div>
                 <div class="feature">
                     <h2 class="featureTitle">
-                        Allow your moderators to run commands that you define.
+                        Allow your moderators to run commands that you define
                     </h2>
                     <p class="featureDescription">
                         All in an easy yet advanced configuration, you choose what commands you'd like your moderators to
@@ -59,7 +56,7 @@ export default {
                 </div>
                 <div class="feature">
                     <h2 class="featureTitle">
-                        It's not just text inputs.
+                        It's not just text inputs
                     </h2>
                     <p class="featureDescription">
                         Typing too slow? You can also configure checkboxes and dropdowns to speed up mobile moderation.
@@ -72,7 +69,7 @@ export default {
                 </div>
                 <div class="feature">
                     <h2 class="featureTitle">
-                        Privacy Respecting Software
+                        Privacy respecting software
                     </h2>
                     <p class="featureDescription">
                         We only ask for what we need to operate, have no trackers or ads, and allow you to request all your
@@ -96,8 +93,5 @@ export default {
                 </div>
             </div>
         </div>
-
-        <Footer />
-
     </div>
 </template>

@@ -9,10 +9,6 @@ export default {
 
 <template>
     <div>
-        <div class="pageHeader">
-            <Header />
-        </div>
-
         <div class="mainContent loginContent" v-if="step === 'start'">
             <div class="loginContainer">
                 <h2 class="loginHeader">

@@ -7,9 +7,6 @@ export default {
 
 <template>
     <div>
-        <div class="pageHeader">
-            <Header />
-        </div>
         <div class="mainContent serverListContent">
             <div class="serverInfoPanel serverInfoPanelFlex">
                 <div class="serverInfoArea">
@@ -20,9 +17,6 @@ export default {
                 </div>
             </div>
             
-        </div>
-
-        <Footer />
-        
+        </div>        
     </div>
 </template>
