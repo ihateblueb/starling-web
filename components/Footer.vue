@@ -10,7 +10,7 @@ import Button from '../components/Button.vue'
         <div class="footerContent">
                 <div class="footerColumn1">
                     <p class="footerBrandName">Starling</p>
-                    <p class="footerBrandText">&copy; 2022-2023 Orchid Development</p>
+                    <p class="footerBrandText">&copy; 2022-2023 ihateblueb</p>
                     <br>
                     <p class="footerBrandText">
                         <span>ihateblueb</span>
