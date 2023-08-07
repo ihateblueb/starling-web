@@ -1,0 +1,111 @@
+/* Source Sans 3 (regular) */
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 100;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Thin.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 200;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-ExtraLight.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 300;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Light.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Regular.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Medium.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 600;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 800;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 900;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Black-Italic.ttf);
+}
+
+/* Source Sans 3 (italic) */
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 100;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-ThinItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 200;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 300;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-Italic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 500;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 600;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 800;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 900;
+    src: url(/assets/fonts/SourceSans3/SourceSans3-BlackItalic.ttf);
+}
