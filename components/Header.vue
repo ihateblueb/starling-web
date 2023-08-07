@@ -16,11 +16,6 @@ export default {
         } else {
             this.loggedin = false
         }
-    },
-    methods: {
-        sendHome() {
-            window.location = '/';
-        }
     }
 }
 </script>
@@ -28,12 +23,14 @@ export default {
 <template>
     <div class="header">
         <div class="headerContent">
-            <div class="wordmark" @click="sendHome()">
-                <div class="smallLogo">
-                    <img class="smallLogoImage" src="/assets/logo.webp">
+            <NuxtLink to="/" style="text-decoration: none;">
+                <div class="wordmark">
+                    <div class="smallLogo">
+                        <img class="smallLogoImage" src="/assets/logo.webp">
+                    </div>
+                    <span class="brandName">Starling</span>
                 </div>
-                <span class="brandName">Starling</span>
-            </div>
+            </NuxtLink>
             <div class="headerLinksArea">
                 <a class="headerLink" href="https://discord.gg/">Support</a>
                 <a class="headerLink" href="https://github.com/ihateblueb/starling">Contribute</a>

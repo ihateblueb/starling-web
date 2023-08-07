@@ -11,6 +11,8 @@ export default {
             <div class="serverInfoPanel serverInfoPanelFlex">
                 <div class="serverInfoArea">
                     <span class="infoPageCategory">Legal</span>
+                    <br>
+                    <br>
                     <h1 class="serverName">Privacy Policy</h1>
                 </div>
             </div>

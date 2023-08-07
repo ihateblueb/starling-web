@@ -45,14 +45,14 @@ import Button from '../components/Button.vue'
                 </div>
                 <div class="footerColumn3">
                     <p class="footerBrandText">
-                        <a href="/legal/privacy">Privacy Policy</a>
+                        <NuxtLink to="/legal/privacy">Privacy Policy</NuxtLink>
                     </p>
                     <p class="footerBrandText">
-                        <a href="/legal/terms">Terms of Service</a>
+                        <NuxtLink to="/legal/terms">Terms of Service</NuxtLink>
                     </p>
                     <br>
                     <p class="footerBrandText">
-                        <a  href="/">About Starling</a>
+                        <NuxtLink to="/">About Starling</NuxtLink>
                     </p>
                     <p class="footerBrandText">
                         <a href="https://dev.orchidmc.me">About Orchid Development</a>

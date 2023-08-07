@@ -26,19 +26,19 @@ export default {
 </script>
 
 <template>
-    <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="icon">
+    <NuxtLink :class="buttonclasses" :style="widthstyle" :to="href" v-if="icon">
         <span class="btnIconCtn">
             <Icon :name="icon" color="#ffffff" size="16" />
             <span style="margin-left: 6px;">
                 <slot></slot>
             </span>
         </span>
-    </a>
-    <a :class="buttonclasses" :style="widthstyle" :href="href" v-if="!icon">
+    </NuxtLink>
+    <NuxtLink :class="buttonclasses" :style="widthstyle" :to="href" v-if="!icon">
         <span class="btnIconCtn">
             <slot></slot>
         </span>
-    </a>
+    </NuxtLink>
 </template>
 
 <style>
