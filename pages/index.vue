@@ -17,6 +17,10 @@ export default {
         }
     }
 }
+
+definePageMeta({
+  layout: "homepage",
+});
 </script>
 
 <template>

@@ -74,7 +74,7 @@ export default {
     z-index: 100;
 }
 
-.homepage .header {
+.homepage {
     background-color: var(--bg-secondary-50);
 }
 
