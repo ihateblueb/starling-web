@@ -14,11 +14,12 @@ export default defineEventHandler((event) => {
             statusMessage: 'Success',
             // real important api response -- this is filler data while i work out the frontend
             id: 0,
+            servers: [{id: 0}, {id: 1}],
         }
     } else {
         throw createError({
             statusCode: 404,
-            statusMessage: 'A server by this id could not be found',
+            statusMessage: 'A user by this id could not be found',
         })
     }
 })

@@ -1,2 +1,3 @@
 npm install
-npm run preview
+npm run build
+node .output/server/index.mjs

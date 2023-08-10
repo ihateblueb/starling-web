@@ -200,6 +200,8 @@ a:focus-within {
 
     height: 100%;
     width: 100%;
+
+    padding-bottom: 40px;
 }
 
 .loginContainer {
@@ -275,7 +277,7 @@ a:focus-within {
 
 @media (max-width: 680px) {
     .pageHeaderTextContainer, .errorHeader, .feature {
-        grid-column: span 4;
+        grid-column: span 6!important;
     }
 }
 

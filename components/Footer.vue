@@ -55,7 +55,7 @@ import Button from '../components/Button.vue'
                         <NuxtLink to="/">About Starling</NuxtLink>
                     </p>
                     <p class="footerBrandText">
-                        <a href="https://dev.orchidmc.me">About Orchid Development</a>
+                        <a href="https://orchidmc.me/dev">About Orchid Development</a>
                     </p>
                     <br>
                     <p class="footerBrandText">
@@ -69,7 +69,7 @@ import Button from '../components/Button.vue'
   
 <style>
 .footer {
-    padding-top: 70px;
+    padding-top: 30px;
     width: 100%;
     display: flex;
     justify-content: center;

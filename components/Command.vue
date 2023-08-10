@@ -51,9 +51,40 @@ export default {
         },
         isTextPlaceholder(item) {
             if (item.startsWith('%') && item.endsWith('%')) {
-                return true;
+                var inputArray = Object.values(this.content.input);
+                if (inputArray.find((element) => element = item).type === "text") {
+                    return true;
+                } else if (inputArray.find((element) => element = item).type === "toggle") {
+                    return false;
+                } else {
+                    return false;
+                }
             } else {
                 return false;
+            }
+        },
+        isTogglePlaceholder(item) {
+            if (item.startsWith('%') && item.endsWith('%')) {
+                var inputArray = Object.values(this.content.input);
+                if (inputArray.find((element) => element = item).type === "text") {
+                    return false;
+                } else if (inputArray.find((element) => element = item).type === "toggle") {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        },
+        isJustText(item) {
+            var inputArray = Object.values(this.content.input);
+            if (item.startsWith('%') && item.endsWith('%')) {
+                return false;
+            } else if (inputArray.find((element) => element = item).type === "") {
+                return true;
+            } else {
+                return true;
             }
         },
         executeCommand(name) {
@@ -73,7 +104,10 @@ export default {
                 <template v-if="isTextPlaceholder(item)">
                     <Input type="noleft noright" :key="index" :placeholder="item.replace(/%/g, '')" />
                 </template>
-                <template v-else>
+                <template v-if="isTogglePlaceholder(item)">
+                    <Toggle type="noleft noright" :key="index" :id="'toggle-'+item.replace(/%/g, '')" />
+                </template>
+                <template v-if="isJustText(item)">
                     <span :key="index" class="comamndText">{{ item }}</span>
                 </template>
             </template>

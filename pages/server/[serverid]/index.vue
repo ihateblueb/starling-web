@@ -1,6 +1,7 @@
 <script setup>
 import AutofillPlayer from '../../../components/AutofillPlayer.vue';
 import Input from '../../../components/Input.vue';
+import Toggle from '../../../components/Toggle.vue';
 import Command from '../../../components/Command.vue';
 import Icon from '../../../components/Icon.vue';
 </script>

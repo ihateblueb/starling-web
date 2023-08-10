@@ -26,7 +26,7 @@ export default {
                     Login to Starling
                 </h2>
                 <p class="loginDescription">
-                    Don't have an account? <a class="loginDescriptionLink" href="/register">Register</a>.
+                    Don't have an account? <NuxtLink class="loginDescriptionLink" to="/register">Register</NuxtLink>.
                 </p>
                 <div class="loginInputs">
                     <LoginButton @click="signIn('discord')" width="250px" type="discord">

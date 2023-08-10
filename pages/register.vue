@@ -20,7 +20,7 @@ const { signIn } = useAuth()
                     Register for Starling
                 </h2>
                 <p class="loginDescription">
-                    Already have an account? <a class="loginDescriptionLink" href="/login">Login</a>.
+                    Already have an account? <NuxtLink class="loginDescriptionLink" to="/login">Login</NuxtLink>.
                 </p>
                 <div class="loginInputs">
                     <Button @click="signIn('discord')" width="250px" type="discord">

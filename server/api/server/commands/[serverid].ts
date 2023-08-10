@@ -32,14 +32,16 @@ export default defineEventHandler((event) => {
                 {
                     "name": "warn",
                     "displayname": "Warn a user",
-                    "command": "cmi warn %username% %reason%",
+                    "command": "cmi warn %username% %reason% %silent%",
                     "input": {
-                        "enabled": "true",
                         "username": {
                             "type": "text"
                         },
                         "reason": {
                             "type": "text"
+                        },
+                        "silent": {
+                            "type": "toggle"
                         }
                     }
                 }
