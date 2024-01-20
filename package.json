@@ -11,7 +11,7 @@
   "devDependencies": {
     "@sidebase/nuxt-auth": "^0.6.0-beta.2",
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
+    "nuxt": "^3.9.3"
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
